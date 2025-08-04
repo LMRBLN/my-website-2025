@@ -1,8 +1,8 @@
-import LaraRockenstein from "../images/lara_rockenstein.svg";
+import LaraRockenstein from "../images/logo_lara_rockenstein.svg";
 
 function Logo ({height}) {
     return (
-        <img src={LaraRockenstein} height={height} alt="Logo Lara Rockenstein"/>
+        <img src={LaraRockenstein} alt="Logo Lara Rockenstein" style={{ height: "20px" }}/>
     )
 }
 

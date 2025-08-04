@@ -1,0 +1,14 @@
+.primary {
+    color: white;
+    padding: 8px 20px;
+    background-color: var(--main-black);
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.20);
+}
+
+.secondary {
+    padding: 7px 19px;
+    border: 1px solid var(--main-black);
+    background-color: transparent;
+    border-radius: 2px;
+}

@@ -1,0 +1,11 @@
+.buttonSmall {
+    color: white;
+    padding: 4px 16px;
+    background-color: var(--main-black);
+    border-radius: 11px;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.20);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    height: fit-content;
+}

@@ -1,0 +1,45 @@
+.projectCard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--main-black);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.imageWrapper {
+    flex: auto;
+    overflow: hidden; 
+    position: relative;
+    height: 80%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* Bild füllt Container, kann beschnitten werden */
+    object-position: center; /* optional: zentriert das Bild innerhalb des Containers */
+    display: block;
+}
+
+.aboutProject {
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+    justify-content: space-between;
+    border-top: 1px solid var(--main-black);
+}
+
+
+/* @media screen and (min-width:481px) {
+    .aboutProject {
+        
+    }
+} */
+
+
+/* @media screen and (min-width:904px) {
+    .aboutProject {
+        
+    }
+} */

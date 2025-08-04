@@ -1,0 +1,20 @@
+.dropDownPopup {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-color: var(--main-black);
+    color: white;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.20);
+    padding: 12px 16px;
+    border-radius: 2px;
+    z-index: 1000;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dropDownPopupItem  {
+    display: flex;
+    gap: 8px;
+};

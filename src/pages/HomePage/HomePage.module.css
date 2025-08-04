@@ -1,0 +1,14 @@
+.content {
+    grid-column: 2 / 11;
+    min-height: calc(100vh - 154px); /* Höhe minus padding minus navbar minus footer */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; /* Horizontal zentrieren */
+    gap: 12px;
+    /* background-color: white; */
+    /* background-image: url('../images/gradients.png'); */
+    /* overflow: visible; */
+    /* background-size: cover; */
+    /* background-position: -40px 0px; */
+}

@@ -5,6 +5,17 @@
   --main-red: #B97979;
   --main-violet: #B97979;
   --main-black: #161616;
+  --shadowSmall: 0px 10px 50px 0px rgba(var(--main-red), 0.5);
+
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden; /* Prevent horizontal scrolling */
+  scroll-behavior: smooth;
 }
 
 * {
@@ -24,22 +35,45 @@ a {
 .App {
   text-align: left;
   background-color: var(--main-grey);
+  gap: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  background-color: var(--main-grey);
+  width: 100vw;
+}
+
+.pageContent {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
-  padding: 40px;
-  font-family: 'IBM Plex Sans KR', sans-serif;
+  box-sizing: border-box;
+
+}
+
+.homeBackground {
   background-image: url('images/gradients.png');
-  background-size: cover; 
+  background-size:cover; 
   background-position: left; 
 }
 
-/* .vjs-audio-only-mode .vjs-control-bar, .vjs-has-started .vjs-control-bar {
-  display: none;
-} */
+.greyBackground {
+  background-image: none;
+}
 
-/* .vjs-fullscreen-control .vjs-control .vjs-button {
-  display: none;
+
+
+/* 
+.about-background {
+  background-image: url('/images/about-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-background {
+  background-image: url('/images/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
 } */
 
 h1 {
@@ -56,6 +90,8 @@ h2 {
   font-weight:600;
 }
 
+
+
 h3 {
   font-size: 12px;
   font-weight: bolder;
@@ -64,6 +100,7 @@ h3 {
 p {
   color: var(--main-black);
   font-size: 12px;
+  max-width: 100%;
 }
 
 p.quote {
@@ -80,6 +117,7 @@ button {
   height: fit-content;
   gap: 12px;
   cursor: pointer; /* Change cursor on hover */
+  background-color: transparent;
 }
 
 /* 
@@ -129,3 +167,8 @@ button {
 
 
 
+@media screen and (max-width: 481px) {
+  .App {
+    padding: 20px;
+  }
+}
