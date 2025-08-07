@@ -3,13 +3,14 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from './pages/HomePage/HomePage';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
-import SnippetsPage from './pages/SnippetsPage';
+import SnippetsPage from './pages/ProjectMioViewerPage/SnippetsPage/SnippetsPage';
 import PlaygroundPage from './pages/PlaygroundPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import InfoPage from './pages/InfoPage/InfoPage';
 import ProjectRumblePage from './pages/ProjectRumblePage/ProjectRumblePage';
 import TimeoutPage from './pages/TimeoutPage/TimeoutPage';
+import ProjectMioViewerPage from './pages/ProjectMioViewerPage/ProjectMioViewerPage';
 
 
 function App() {
@@ -44,6 +45,8 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/projects/rumble" element={ <ProjectRumblePage/>}/>
+              <Route path="/projects/mioviewer" element={<ProjectMioViewerPage/>}/>
+              {/* <Route path="/projects/giraffe" element={<GiraffePage/>}/> */}
               <Route path="/snippets" element={<SnippetsPage />} />
               <Route path="/playground" element={<PlaygroundPage />} />
               <Route path="/timeout" element={<TimeoutPage />} />

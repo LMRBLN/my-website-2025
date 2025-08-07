@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import menu_icon_close from '../images/menu_icon_close.svg'
 import { background } from '@cloudinary/url-gen/qualifiers/focusOn';
 import { BackgroundColor } from '@cloudinary/url-gen/actions/background/actions/BackgroundColor';
-
+import Switcher from '../components/ProjectModal/Switcher';
 const style = {
     gridColumn: '2 / 12',
     minHeight: '100vh',
@@ -24,6 +24,10 @@ function PlaygroundPage() {
                 document.body.style.overflow = "auto"; // Zurücksetzen, wenn die Komponente entfernt wird
             };
         }, []);
+
+        const handleToggle = (isOn) => {
+            console.log('Switcher is:', isOn ? 'ON' : 'OFF');
+          };ç
     
     const [game, setGame] = useState(false);
 
@@ -33,6 +37,11 @@ function PlaygroundPage() {
 
 
                 <div id="tetris" style={style}>
+                      <Switcher 
+                            initialState={false}
+                            onToggle={handleToggle}
+                            label="Dark Mode"
+                        />
                     <Tetris/>
                     <div id="menu-icon-close-tetris" onClick={()=> setGame(false)}>
                             <img src={menu_icon_close} alt="close menu"/>

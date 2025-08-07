@@ -28,7 +28,60 @@
     padding: 12px;
     justify-content: space-between;
     border-top: 1px solid var(--main-black);
+    gap: 10px;
 }
+
+.aboutProject :nth-child(1) {
+    white-space: nowrap;
+  }
+
+.aboutProject :nth-child(2), .aboutProject :nth-child(3) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block; /* oder inline-block, je nach Element */
+  }
+
+  
+
+.imageWrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0; /* = top: 0; right: 0; bottom: 0; left: 0 */
+    background-color: var(--main-grey);
+    opacity: 70%;; /* 👈 transparentes Schwarz */
+    pointer-events: none;
+    visibility: hidden; 
+  }
+  
+
+.slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 20px;
+    font-weight: light;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--main-yellow);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.5rem;
+    line-height: 1.5em;
+    visibility: hidden;
+}
+
+.imageWrapper:hover .slogan  {
+    visibility: visible;
+  }
+
+
+.imageWrapper:hover::after {
+    visibility: visible;
+  }
+
+
 
 
 /* @media screen and (min-width:481px) {
