@@ -1,20 +1,17 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
 import checkAndClear from '../../helpers/checkAndClear';
 import keyboard from '../../images/keyboard.svg'
-import './Tetris.css';
+import styles from './Tetris.module.css';
 import Button from '../Button/Button';
 
-
-
-const BOX_WIDTH = 50;
-const BOX_HEIGHT = 20;
+// Constants for the setup
+const ASPECT_RATIO = 2; // height:width = 2:1
+const GAME_WIDTH = 100;
+const GAME_HEIGHT = 200;
 
 const BOX_X = 5; 
 const BOX_Y = 20;
 
-const GAME_WIDTH = BOX_X*BOX_WIDTH;
-const GAME_HEIGHT = BOX_Y*BOX_HEIGHT;
 const COLOR_ARR = ['#B33951', '#91C7B1', '#F1F7ED', '#E3D081','#918284']
 // const boxArr = [["red"],["blue"],["red"],["blue"],["red"]]
 // let boxArr = Array(5).fill(0).map(row => new Array(5).fill("red"));
@@ -31,6 +28,30 @@ function Tetris () {
     const [boxArr, setBoxArr] = useState(boxArrInit);
     const [gameIsStarted, setGameIsStarted] = useState(true);
     
+    // Responsive sizing state
+    const [gameWidth, setGameWidth] = useState(GAME_WIDTH);
+    const [gameHeight, setGameHeight] = useState(GAME_HEIGHT);
+    const [boxWidth, setBoxWidth] = useState(GAME_WIDTH / BOX_X);
+    const [boxHeight, setBoxHeight] = useState(GAME_HEIGHT / BOX_Y);
+    
+    // Update sizes on load and resize while keeping aspect ratio of 2:1 (height:width)
+    useEffect(() => {
+        const updateSizes = () => {
+            const maxWidthFromViewport = window.innerWidth * 0.9;
+            const maxWidthFromHeight = (window.innerHeight * 0.5) / ASPECT_RATIO;
+            const width = Math.floor(Math.min(maxWidthFromViewport, maxWidthFromHeight));
+            const height = Math.floor(width * ASPECT_RATIO);
+            setGameWidth(width);
+            setGameHeight(height);
+            setBoxWidth(width / BOX_X);
+            setBoxHeight(height / BOX_Y);
+        };
+
+        updateSizes();
+        window.addEventListener('resize', updateSizes);
+        return () => window.removeEventListener('resize', updateSizes);
+    }, []);
+    
     const createRandomBoxColor = () => {
         const random = Math.floor(Math.random() * COLOR_ARR.length);
         const boxColor = COLOR_ARR[random];
@@ -46,9 +67,6 @@ function Tetris () {
     const [help, setHelp] = useState(false);
 
 
-
-
-
     const moveRight = () => {
         if (activeBoxX < BOX_X-1) {
             setActiveBoxX((prevState) => prevState + 1);
@@ -62,7 +80,6 @@ function Tetris () {
     }
 
     const drop = () => {
-
         if (Math.max(...boxArr.map((e) => e.length)) >= BOX_Y-1) {
             setGameIsStarted(false);
             console.log("Game Over!");
@@ -75,7 +92,6 @@ function Tetris () {
             setBoxArr(boxArrCopy);
             setActiveBoxColor(createRandomBoxColor());
         }
-
     }
     
     useEffect(() => {
@@ -84,12 +100,8 @@ function Tetris () {
         setActiveBoxY(BOX_Y-1);
     }, [boxArr])
 
-
-
-    
     
     useEffect(() => {
-        
         
         if(gameIsStarted) {
             
@@ -150,10 +162,14 @@ function Tetris () {
     });
 
     const startAgain = () => {
-
-        // window.location.reload(false);
-        // setGameOver(false);
-        // setGameIsStarted(true);
+        setGameOver(false);
+        setBoxArr(boxArrInit);
+        setGameIsStarted(true);
+        setActiveBoxColor(createRandomBoxColor());
+        setActiveBoxX((BOX_X-1)/2);
+        setActiveBoxY(BOX_Y-1);
+        setTime(0);
+        setHelp(false);
     }
 
     const pauseHelp = () => {
@@ -185,21 +201,28 @@ function Tetris () {
 
     
     return (
-
-
-        <Div id="tetris">
+        <div className={styles.container}>
             {/* <div>
                 <button onClick={()=> setGameIsStarted(true)}> START </button>
                 <button onClick={()=> setGameIsStarted(false)}> STOP </button>
             </div> */}
             
 
-            <Timer> {parseFloat(time/1000).toFixed(2)}</Timer>
-            <StartButton onClick={() => pauseHelp()}> {gameIsStarted && <> Pause / Help </> } {!gameIsStarted && gameOver && <> Play Again</>} {!gameIsStarted && !gameOver && <> Play On </>}</StartButton>
+            <div className={styles.timer}> {parseFloat(time/1000).toFixed(2)}</div>
+            <button className={styles.startButton} onClick={() => pauseHelp()}> {gameIsStarted && <> Pause / Help </> } {!gameIsStarted && gameOver && <> Play Again</>} {!gameIsStarted && !gameOver && <>   </>}</button>
 
-            <GameBox height={GAME_HEIGHT} width={GAME_WIDTH}>
+            <div className={styles.gameBox} style={{ height: gameHeight, width: gameWidth }}>
 
-                <Box y={activeBoxY} x={activeBoxX} color={activeBoxColor}/>
+                <div
+                    className={styles.box}
+                    style={{
+                        height: boxHeight,
+                        width: boxWidth,
+                        bottom: activeBoxY * boxHeight,
+                        left: activeBoxX * boxWidth,
+                        backgroundColor: activeBoxColor
+                    }}
+                />
 
 
                 {boxArr.map((column, xindex) => {
@@ -210,7 +233,16 @@ function Tetris () {
                             {/* console.log(yindex); */}
                             {/* console.log(spot); */}
                             return (
-                                <Box y={yindex} x={xindex} color={spot}/>
+                                <div
+                                    className={styles.box}
+                                    style={{
+                                        height: boxHeight,
+                                        width: boxWidth,
+                                        bottom: yindex * boxHeight,
+                                        left: xindex * boxWidth,
+                                        backgroundColor: spot
+                                    }}
+                                />
                             )
                             }
                         )
@@ -220,28 +252,35 @@ function Tetris () {
                 }
 
 
-            </GameBox>
+            </div>
 
-            <MobileControls>
+            <div className={styles.mobileControls}>
                 <Button showIcon={false} variant="secondary" onClick={moveLeft} text={'left'}/>
                 <Button showIcon={false} variant="primary" onClick={drop} text={'drop'}/>
                 <Button showIcon={false} variant="secondary" onClick={moveRight} text={'right'}/>
-            </MobileControls>
+            </div>
 
             {gameOver &&
-                    <GameOver onClick={() => startAgain()}> Game over </GameOver>
+                    <div className={styles.gameOver} onClick={() => startAgain()}> 
+                        Game over 
+                        <br/>
+                        <span> Click to play again</span>
+                    </div>
                 }
 
             {help &&
-                <Help onClick={() => pauseHelp()}>
-                    Use the arrow keys to navigate left or right. 
+                <div className={styles.help} onClick={() => pauseHelp()}>
+                    Use the arrow keys or buttons to navigate left or right. 
                     <br/>
-                    Use the space key to drop a box.
+                    Use the space key or the drop button to drop a box.
                     <br/>
                     If the tower gets too high, you loose... 
-                    
-                    <img src={keyboard} id="keyboard"/>
-                </Help>
+                    <br/>
+                    <br/>
+                    Click to play on
+
+                    <img src={keyboard} className={styles.keyboard} alt="Keyboard layout for controls"/>
+                </div>
             }
 
 
@@ -249,114 +288,10 @@ function Tetris () {
               <StartButton onClick={()=> setGameIsStarted(!gameIsStarted)}> Help </StartButton>
             </Settings> */}
 
-
-
-
-
-        </Div>
+        </div>
     ) 
 }
 
 
 
 export default Tetris;
-
-const Box = styled.div`
-    position: absolute;
-    background-color: ${(props) => props.color};
-    height: ${BOX_HEIGHT}px;
-    width: ${BOX_WIDTH}px;
-    bottom: ${(props) => props.y * BOX_HEIGHT}px;
-    left: ${(props) => props.x * BOX_WIDTH}px;
-    border: 1px solid #e1e0dd;
-    border-radius: 2px;
-    box-sizing: border-box; 
-`;
-
-const Div = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #e1e0dd;
-`
-
-const GameBox = styled.div`
-    position: relative;
-    margin: auto;
-    height: ${(props) => props.height}px;
-    width: ${(props) => props.width}px;
-    background-color: none;    
-    border-bottom: 1px solid black;
-`
-// const StartButton = styled.button`
-//     position: absolute;
-//     bottom: 10%;
-//     width: 130px;
-//     height: 50px;
-//     ${'' /* background-color: #E1E0DD; */}
-//     background: rgba(225, 224, 221, 0);;
-//     margin-top: 3%;
-//     padding: 5px;
-//     border: none;
-//     border-radius: 25px;
-//     outline:none;
-//     text-transform: uppercase;
-//     font-weight: 500;
-// `
-
-const StartButton = styled.button`
-    position: absolute;
-    right: 20%;  
-`
-
-
-
-  
-
-const GameOver = styled.div`
-    position: absolute;
-    width: 90%;
-    height: 90%;
-    background: rgba(225, 224, 221, 0.8);;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 150px;
-    font-family: 'Unica One', cursive;
-    text-align: center;
-`
-const Timer = styled.div`
-    position: absolute;
-    left: 20%;    
-`
-// const Settings = styled.div`
-//     position: absolute;
-//     right: 15%;
-//     `
-
-const MobileControls = styled.div`
-    position: absolute;
-    bottom: 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    `
-
-
-const Help = styled.div`
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    bottom: 0px;
-    background: rgba(225, 224, 221, 0.8);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    `
-

@@ -4,9 +4,10 @@ import styles from './Switcher.module.css';
 function Switcher({ 
     initialState = false, 
     onToggle, 
-    labelOn = "ON",
-    labelOff = "OFF",
-    disabled = false 
+    label1 = "flat",
+    label2 = "isometric",
+    disabled = false,
+    className = ''
   }) {
     const [isOn, setIsOn] = useState(initialState);
   
@@ -23,16 +24,16 @@ function Switcher({
   
     return (
       <button
-        className={`${styles.switcher} ${isOn ? styles.on : styles.off} ${disabled ? styles.disabled : ''}`}
+        className={`${styles.switcher} ${isOn ? styles.on : styles.off} ${disabled ? styles.disabled : ''} ${className}`.trim()}
         onClick={handleToggle}
         disabled={disabled}
         role="switch"
         aria-checked={isOn}
-        aria-label={`Toggle ${isOn ? labelOn : labelOff}`}
+        aria-label={`Toggle ${isOn ? label1 : label2}`}
       >
         <div className={styles.slider} />
-        <span className={`${styles.label} ${styles.labelOn}`}>{labelOn}</span>
-        <span className={`${styles.label} ${styles.labelOff}`}>{labelOff}</span>
+          <span >{label1}</span>
+          <span >{label2}</span>
       </button>
     );
   }

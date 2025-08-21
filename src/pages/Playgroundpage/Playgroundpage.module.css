@@ -1,0 +1,49 @@
+.content {
+    min-height: calc(100vh - 154px);
+    grid-column: 1 / 13;
+
+}
+
+
+.tetris {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.switcher {
+    position: relative;
+    top: 40px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .content {
+        min-height: calc(100vh - 194px); /* Höhe minus padding minus navbar minus footer */
+    }
+  }
+
+  @media screen and (max-width: 481px) {
+    .content {
+        min-height: calc(100vh - 144px); /* Höhe minus padding minus navbar minus footer */
+    }
+
+    .switcher {
+
+    }
+  }
+
+
+ .tetrisImage {
+     max-width: 300px;
+     width: 100%;
+     height: auto;
+     display: block;
+     margin: 40px auto 0;
+     position: relative;
+     top: 10%;
+     
+ }

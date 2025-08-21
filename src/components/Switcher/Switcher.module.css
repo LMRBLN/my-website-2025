@@ -1,0 +1,36 @@
+/* Switcher.module.css */
+.switcher {
+    position: relative;
+    height: 28px;
+    padding: 2px;
+    border: 1px solid var(--main-black);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  
+
+  .switcher span {
+    padding: 4px 12px;
+    border-radius: 11px;
+  }
+
+  .switcher.on > span:first-of-type {
+    color: white;
+    background-color: var(--main-black);
+
+  }
+  
+  .switcher.off > span:last-of-type {
+    color: white;
+    background-color: var(--main-black);
+
+  }
+  
+  .slider {
+    position: absolute;
+  }
+  
+
