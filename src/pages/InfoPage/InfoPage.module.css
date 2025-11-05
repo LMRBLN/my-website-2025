@@ -1,6 +1,13 @@
 .content {
-    grid-column: 4 / 10;
+    grid-column: 5 / 9;
     padding-top: 40px;
+    height: calc(100vh - 154px); /* Höhe abzüglich Navbar und Footer */
+    overflow-y: auto; /* Vertikales Scrollen erlauben */
+    overflow-x: hidden; /* Horizontales Scrollen verhindern */
+    /* Hide scrollbar while keeping scrolling */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+
 }
 
 .myJourney {
@@ -29,7 +36,7 @@
 
 .text p {
     margin-bottom: 0.5rem;
-    font-size: 14px;
+    /* font-size: 14px; */
     font-weight: 100;
     line-height: 1.1rem;
 }
@@ -46,13 +53,35 @@
 }
 
 .skills {
-
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px; /* Abstand zwischen den Elementen */
 }
 
+.skills > * {
+    grid-column: span 2; /* Alle direkten Kinder nehmen 2 Spalten ein */
+}
 /* .box {
     border: 1px solid var(--main-black); 
     radius: 4px;
 } */
+
+.skillList h2 {
+    border-bottom: 1px solid var(--main-black);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.skillList ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skillList li {
+    position: relative;
+    margin-bottom: 4px;
+    font-weight: lighter;
+}
 
 
 .box {
@@ -79,4 +108,48 @@
     font-weight:bolder;
     background-color: var(--main-yellow);
  }
+
+.buttonContainer {
+    display: flex;
+    justify-content: left;
+    margin-top: 40px;
+}
+
+
+
+@media screen and (max-width: 1639px) {
+    .content {
+        grid-column: 4 / 10;
+    }
+}
+
+
+ @media screen and (max-width: 768px) {
+
+    .content {
+        grid-column: 2 / 12;
+    }
+
+}
+
+
+@media screen and (max-width: 481px) {
+    .content{
+        grid-column: 1 / 13;
+    }
+
+    .imageWrapper {
+        overflow: hidden; 
+        height: auto;
+        grid-column: 2 / 6;
+    }
+
+    .text {
+        grid-column: 1 / 7;
+
+    }
+
+    .skills > * {
+        grid-column: 1 / 7;    }
+}
 

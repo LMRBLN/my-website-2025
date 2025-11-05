@@ -4,6 +4,11 @@ import keyboard from '../../images/keyboard.svg'
 import styles from './Tetris.module.css';
 import Button from '../Button/Button';
 
+// Audio for drop sound
+const dropSound = new Audio('/files/drop-sound.wav');
+// Audio for clear sound
+const clearSound = new Audio('/files/clear-sound.wav');
+
 // Constants for the setup
 const ASPECT_RATIO = 2; // height:width = 2:1
 const GAME_WIDTH = 100;
@@ -91,11 +96,15 @@ function Tetris () {
             boxArrCopy[activeBoxX].push(activeBoxColor);
             setBoxArr(boxArrCopy);
             setActiveBoxColor(createRandomBoxColor());
+            dropSound.play();
         }
     }
     
     useEffect(() => {
-        checkAndClear(boxArr, [activeBoxX,activeBoxY]);
+        const wasCleared = checkAndClear(boxArr, [activeBoxX,activeBoxY]);
+        if (wasCleared) {
+            clearSound.play();
+        }
         setActiveBoxX((BOX_X-1)/2);
         setActiveBoxY(BOX_Y-1);
     }, [boxArr])

@@ -6,7 +6,9 @@ const checkAndClear = (arr, position) => {
     let positionsToRemoveFinal = getpositionsToRemove(arr, position);
     if(positionsToRemoveFinal.length > 2) {
         clearPositions(arr, positionsToRemoveFinal);
+        return true; // Boxen wurden erfolgreich entfernt
     }
+    return false; // Keine Boxen wurden entfernt
 }
 
 

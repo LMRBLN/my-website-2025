@@ -1,7 +1,7 @@
 import styles from "./HomePage.module.css";
 import Button from "../../components/Button/Button";
 import { useEffect } from "react";
-import Animation from "../../images/animation.gif";
+// import Animation from "../../images/animation.gif";
 // import StyledButton from "../components/StyledButton";
 // import LaraRockenstein from "../images/logo_lara_rockenstein.svg";
 // import ButtonSmall from "../components/ButtonSmall";

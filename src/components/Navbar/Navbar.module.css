@@ -6,11 +6,24 @@
     border-bottom: 1px solid var(--main-black);
     align-items: flex-end;
     position: relative;
-    /* position: fixed; */
-    /* left: 40px;
-    right: 40px; */
     width: 100%;
-    
+
+}
+
+
+.navbar a {
+    margin: 0;
+    background: none;           /* entferne das rote Hintergrund-Fallback */
+    /* display: inline-flex;        */
+    align-items: center;        /* zentriert Inhalt (z.B. img) vertikal */
+    padding: 0;                 /* optional: keine Innenabstände */
+    text-decoration: none;
+}
+
+.navbar img {
+    margin: 0;
+    min-height: 20px;
+    width: auto;
 }
 
 .linksbar {
@@ -30,6 +43,11 @@
 .navTimeout {
     display: none;
 }
+
+/* img, a {
+    padding: 0;
+    margin: 0;
+} */
 
 
 @media screen and (max-width: 768px) {
@@ -53,20 +71,22 @@
         padding-bottom: 70px;
     }   
 
-    .linksbar {
+    /* .linksbar {
         padding-left: 0;
         padding-top: 10px;
         padding-bottom: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
         position: absolute;
         width: 100%;
         display: flex;
-        overflow-x: auto;     /* 👉 erlaubt horizontales Scrollen */
+        overflow-x: auto;     /
         scroll-snap-type: x mandatory;
         top: 40px;
         justify-content: left;
-        -ms-overflow-style: none;     /* IE & Edge */
-        scrollbar-width: none;        /* Firefox */
-    }
+        -ms-overflow-style: none;     
+        scrollbar-width: none;        
+    } */
 
 
 }

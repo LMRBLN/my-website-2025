@@ -1,0 +1,83 @@
+.pdf-flipbook {
+          width: 100%;
+          display: grid;
+          justify-content: center;
+          gap: 0.75rem;
+          justify-items: stretch;
+        }
+
+        .book {
+          width:fit-content;
+          position: relative;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          gap: 0px;
+          overflow: hidden;
+          box-shadow: 0 6px 24px rgba(0,0,0,.15);
+        }
+        /* Seite als flex-container, Inhalt (Canvas) zentriert */
+        .page {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fff;
+          overflow: visible;        /* wichtig: nichts abschneiden */
+          border-radius: 0px;
+          transform-style: preserve-3d;
+          box-sizing: border-box;
+          padding: 0px;             /* etwas Abstand rund um Canvas */
+          /* border: 0.1px solid var(--main-grey) */
+          box-shadow: 0 2px 2px rgba(0,0,0,.15);
+        }
+        /* Solo: span über beide Spalten und zentriert */
+        .page-right.solo {
+          grid-column: span 2;
+          justify-self: center;
+          width: 50%;
+          box-shadow: 0 6px 24px rgba(0,0,0,.18);
+        }
+
+        /* sanfte "Page Turn" Illusion (Klassen bleiben modul-basiert) */
+        .flip-next .page-right {
+          animation: turnRight 240ms ease both;
+        }
+        .flip-prev .page-left {
+          animation: turnLeft 240ms ease both;
+        }
+        @keyframes turnRight {
+          from { transform-origin: left center; transform: rotateY(0deg); }
+          to   { transform-origin: left center; transform: rotateY(-18deg); }
+        }
+        @keyframes turnLeft {
+          from { transform-origin: right center; transform: rotateY(0deg); }
+          to   { transform-origin: right center; transform: rotateY(18deg); }
+        }
+
+        /* Klick-Zonen */
+        .nav {
+          top: 0px; bottom: 0;
+          width: 20%;
+          border: 0; background: transparent;
+          cursor: pointer;
+          z-index: 3;
+        }
+        .nav.prev { left: 0; }
+        .nav.next { right: 0; }
+
+        .nav:hover { background: linear-gradient(to right, rgba(0,0,0,.04), transparent); }
+        .nav.next:hover { background: linear-gradient(to left, rgba(0,0,0,.04), transparent); }
+
+        .controls {
+          margin-top: 20px;
+          display: flex; justify-content: center; align-items: center; gap: 12px;
+          font-size: 12px;
+
+        }
+        .controls button {
+          border-radius: 8px;
+          background: #fff; cursor: pointer;
+        }
+        .controls button:disabled { opacity: .5; cursor: not-allowed; }
+        .status { opacity: .8; width: 80px; display: flex; justify-content: center;}

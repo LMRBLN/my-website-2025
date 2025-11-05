@@ -11,8 +11,6 @@ const handleClick = () => {
 function InfoPage() {
 
 
-
-
     return (
         <div className={styles.content}>
             <div className={styles.myJourney}>
@@ -57,8 +55,57 @@ function InfoPage() {
                     <p>
                         Now, I am curious for new opportunities.
                     </p>
+
+                    <div className={styles.buttonContainer}>
+                        <Button text={"Open CV as PDF"} onClick={handleClick} showIcon={true} variant="primary"/>
+                    </div>
+
+
                 </div>
+
+                
             </div>
+{/* 
+            <div className={styles.skills}>
+                        <div className={styles.skillList}>
+                            <h2> Techstack</h2>
+                            <ul>
+                                <li>Javascript (ES6) </li>
+                                <li>NodeJS (ES6) </li>
+                                <li>Express </li>
+                                <li>MongoDB </li>
+                                <li>React </li>
+                                <li>HTML, CSS </li>
+                            </ul>
+                        </div>
+
+                        <div className={styles.skillList}>
+                            <h2> Software</h2>
+                            <ul>
+                                <li>Figma </li>
+                                <li>Adobe CS (Ps, Id, Ai, Xd, Pr) </li>
+                                <li>SolidWorks (Modelling) </li>
+                                <li>Keyshot (Rendering) </li>
+                            </ul>
+                        </div>
+
+                        <div className={styles.skillList}>
+                            <h2> Languages</h2>
+                            <ul>
+                                <li>German (Native) </li>
+                                <li>French (Fluent)</li>
+                                <li>Spanish (Fluent) </li>
+                                <li>English (Fluent)</li>
+                                <li>Portuguese (Basics)</li>
+                                <li>German Sign Language (Basics)</li>
+                            </ul>
+                        </div>
+
+            </div> */}
+
+            {/* <div className={styles.buttonContainer}>
+            <Button text={"Open CV as PDF"} onClick={handleClick} showIcon={true} variant="primary"/>
+            </div> */}
 
             {/* <h3 className={styles.title}> My skills and experiences </h3>
             <div className={styles.skills}>
@@ -89,7 +136,6 @@ function InfoPage() {
                 </div>
 
             </div> */}
-            <Button text={"Open CV as PDF"} onClick={handleClick} showIcon={true} variant="primary"/>
 
         </div>
     );

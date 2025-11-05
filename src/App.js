@@ -8,9 +8,13 @@ import PlaygroundPage from './pages/Playgroundpage/PlaygroundPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import InfoPage from './pages/InfoPage/InfoPage';
-import ProjectRumblePage from './pages/ProjectRumblePage/ProjectRumblePage';
 import TimeoutPage from './pages/TimeoutPage/TimeoutPage';
 import ProjectMioViewerPage from './pages/ProjectMioViewerPage/ProjectMioViewerPage';
+import ProjectRumblePage from './pages/ProjectRumblePage/ProjectRumblePage';
+import ProjectGiraffePage from './pages/ProjectGiraffePage/ProjectGiraffePage';
+import ProjectSecurityCentralPage from './pages/ProjectSecurityCentralPage/ProjectSecurityCentralPage';
+import ProjectAlgaeKitPage from './pages/ProjectAlgaeKitPage/ProjectAlgaeKitPage';
+import ProjectAirYardPage from './pages/ProjectAirYardPage/ProjectAirYardPage';
 
 
 function App() {
@@ -26,12 +30,13 @@ function App() {
         setBackground('homeBackground');
         break;
       case '/info':
-      case '/contact':
+        setBackground('greyBackground');
+      case '/projects':
         setBackground('greyBackground');
         break;
-      case '/timeout':
-        setBackground('homeBackground');
-        break;
+      // case '/timeout':
+      //   setBackground('homeBackground');
+      //   break;
       default:
         setBackground('');
         break;
@@ -44,9 +49,12 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/projects/rumble" element={ <ProjectRumblePage/>}/>
-              <Route path="/projects/mioviewer" element={<ProjectMioViewerPage/>}/>
-              {/* <Route path="/projects/giraffe" element={<GiraffePage/>}/> */}
+              <Route path="/projects/mioviewer" element={<ProjectMioViewerPage />} />
+              <Route path="/projects/rumble" element={<ProjectRumblePage />} />
+              <Route path="/projects/giraffe" element={<ProjectGiraffePage />} />
+              <Route path="/projects/securitycentral" element={<ProjectSecurityCentralPage />} />
+              <Route path="/projects/algaekit" element={<ProjectAlgaeKitPage />} />
+              <Route path="/projects/airyard" element={<ProjectAirYardPage />} />
               <Route path="/snippets" element={<SnippetsPage />} />
               <Route path="/playground" element={<PlaygroundPage />} />
               <Route path="/timeout" element={<TimeoutPage />} />

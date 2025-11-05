@@ -1,0 +1,19 @@
+.content {
+    grid-column: 1 / 13;
+    min-height: calc(100vh - 154px);
+}
+.image {
+    border-radius: 30px;
+    box-shadow: 5px 5px 11px 7px rgba(0,0,0,0.15);
+    width: auto;
+}
+
+/* .scrollContent .animation  {
+    border: 1px solid red;
+    background: red;
+} */
+
+/* 
+.rottest {
+    background-color: red;
+} */

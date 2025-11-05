@@ -2,7 +2,8 @@ import Tetris from '../../components/Tetris/Tetris'
 import { useEffect, useState } from 'react';
 import Switcher from '../../components/Switcher/Switcher';
 import styles from './Playgroundpage.module.css'
-import TetrisIsometric from '../../images/tetris_isometric.png'
+import TetrisIsometric from '../../images/tetris_isometric.png';
+import Button from '../../components/Button/Button';
 
 
 function PlaygroundPage() {
@@ -39,7 +40,15 @@ function PlaygroundPage() {
                     {isSwitcherOn ? (
                         <Tetris/>
                     ) : (
+                        <div className={styles.placeholderIsometric}>
                         <img src={TetrisIsometric} className={styles.tetrisImage} alt="Tetris isometric illustration" />
+                        <p> coming soon! </p>
+                        {/* <div className={styles.mobileControls}>
+                            <Button showIcon={false} variant="secondary"  text={'left'}/>
+                            <Button showIcon={false} variant="primary"  text={'drop'}/>
+                            <Button showIcon={false} variant="secondary" text={'right'}/>
+                        </div> */}
+                        </div>
                     )}
 
 

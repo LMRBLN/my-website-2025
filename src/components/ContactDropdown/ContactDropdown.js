@@ -26,10 +26,17 @@ import styles from "./ContactDropdown.module.css";
 
 function ContactDropdown() {
     const [isOpen, setIsOpen] = useState(false);
+    const [showQRCode, setShowQRCode] = useState(false);
     const dropdownRef = useRef(null);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
+    };
+
+    const handleQRCodeClick = (e) => {
+        e.preventDefault();
+        setShowQRCode(true);
+        setIsOpen(false);
     };
 
     useEffect(() => {
@@ -52,9 +59,25 @@ function ContactDropdown() {
                 <ul className={styles.dropDownPopup}>
                     <ContactDropdownItem icon={IoIosMail} text={'write me an email'} link={"mailto:lara.rockenstein@live.de"} newWindow={false} />
                     <ContactDropdownItem icon={IoLogoLinkedin} text={'connect on linkedIn'} link={'https://www.linkedin.com/in/lararockenstein/'} newWindow={true} />
-                    <ContactDropdownItem icon={RiTelegram2Fill} text={'chat on telegram'} link={'https://t.me/lararockenstein'} newWindow={true} />
-                    <ContactDropdownItem icon={IoLogoGithub} text={'check out my github'} link={'https://github.com/LMRBLN'} newWindow={true} />
+                    {/* <ContactDropdownItem icon={RiTelegram2Fill} text={'chat on telegram'} link={'https://t.me/lararockenstein'} newWindow={true} /> */}
+                    {/* <li>
+                        <button type="button" className={styles.item} onClick={handleQRCodeClick}>
+                            <RiTelegram2Fill />
+                            <span>chat on telegram (desktop)</span>
+                        </button>
+                    </li> */}
+                    <ContactDropdownItem icon={IoLogoGithub} text={'visit my github'} link={'https://github.com/LMRBLN'} newWindow={true} />
                 </ul>
+            )}
+            
+            {showQRCode && (
+                <div className={styles.modal} onClick={() => setShowQRCode(false)}>
+                    <img 
+                        src="/images/telegram_qrcode.png" 
+                        alt="Telegram QR Code"
+                        className={styles.qrCode}
+                    />
+                </div>
             )}
         </div>
     );

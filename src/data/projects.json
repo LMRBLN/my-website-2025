@@ -1,0 +1,56 @@
+[
+  {
+    "id": "mioviewer",
+    "title": "MIO Viewer",
+    "description": "standardized displaying modules for medical records",
+    "phases": "Research | Design | Testing",
+    "image": "project_mioviewer.png",
+    "slogan": "How to make (structured) medical data accessible to all healthcare providers in a consistent format?",
+    "link": "/projects/mioviewer"
+  },
+  {
+    "id": "rumble",
+    "title": "Rumble",
+    "description": "eventplanning tool for mobile",
+    "phases": "Idea | Design | Web Development",
+    "image": "project_rumble.png",
+    "slogan": "How to not get lost in the tabs jungle while browsing for the best deal?",
+    "link": "/projects/rumble"
+  },
+  {
+    "id": "giraffe",
+    "title": "Giraffe",
+    "description": "web shopping assistant",
+    "phases": "Idea | Design | Web Development",
+    "image": "project_giraffe.png",
+    "slogan": "How to not get lost in the tabs jungle while browsing for the best deal?",
+    "link": "/projects/giraffe"
+  },
+  {
+    "id": "securitycentral",
+    "title": "Security Central",
+    "description": "report creation and editing tool",
+    "phases": "Research | Design | Testing",
+    "image": "project_reporting.png",
+    "slogan": "How to not get lost in the tabs jungle while browsing for the best deal?",
+    "link": "/projects/securitycentral"
+  },
+  {
+    "id": "algaekit",
+    "title": "Algae Kit",
+    "description": "hands on learning game for children",
+    "phases": "Research | Design | Manufacturing | Testing",
+    "image": "project_algaekit.png",
+    "slogan": "How to get children enthustiastic about science and sustainability?",
+    "link": "/projects/algaekit"
+  },
+  {
+    "id": "airyard",
+    "title": "Air Yard",
+    "description": "inflatable playpen to go",
+    "phases": "Research | Design | Manufacturing | Testing",
+    "image": "project_playpen.jpg",
+    "slogan": "How to be parent of a toddler without missing out?",
+    "link": "/projects/airyard"
+  }
+]

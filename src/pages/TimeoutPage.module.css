@@ -1,0 +1,15 @@
+.content {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    position: relative;
+    z-index: 1;
+    /* ...weitere bestehende Styles... */
+}

@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styles from "./Navbar.module.css";
 import NavItem from "./NavItem";
 import LaraRockenstein from "../../images/logo_lara_rockenstein.svg";
@@ -19,7 +20,6 @@ function Navbar() {
       navClass += " " + styles.navTimeout;
     }
 
-
     return (
         <nav className={navClass}>
             <NavItem to="/"> 
@@ -29,8 +29,8 @@ function Navbar() {
                 <NavItem to="/projects"> projects </NavItem>
                 <NavItem to="/info"> info </NavItem>
                 <NavItem to="/playground"> playground </NavItem>
-                <NavItem to="/snippets"> snippets </NavItem>
-                <NavItem to="/timeout"> timeout </NavItem>
+                {/* <NavItem to="/snippets"> snippets </NavItem> */}
+                {/* <NavItem to="/timeout"> timeout </NavItem> */}
             </div>
             <ContactDropdown />
         </nav>

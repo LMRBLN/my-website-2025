@@ -1,0 +1,4 @@
+.content {
+    grid-column: 1 / 13;
+    min-height: calc(100vh - 154px);
+}

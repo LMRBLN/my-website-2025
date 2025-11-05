@@ -21,6 +21,8 @@
   box-sizing: border-box;
 }
 
+/* removed activeBox animation */
+
 .startButton {
   position: absolute;
   right: 20%;
