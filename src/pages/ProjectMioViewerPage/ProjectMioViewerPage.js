@@ -45,20 +45,24 @@ function ProjectMioViewerPage() {
 
                     <div>
                         <h4>Context</h4>
-                        <p>At mio42, we develop MIOs (“medical information objects”), national standards for structured data sets for various medical data sets that are to be exchanged via the ePA in the future. These include topics such as medication plans, vaccination records, laboratory findings, etc. At their core, these are technical specifications that will later lead to semantically and syntactically uniform code files that can be exchanged between systems in an interoperable manner. Ultimately, the systems can and should decide for themselves how the data sets are displayed and how they are processed, but we want to create a shortcut for purely read-only systems: My task as a UX/UI designer is therefore to develop a set of display components that can be easily integrated directly into the systems, thus making the data readable in a uniform manner.</p>
+                        <p>
+                            At mio42, we develop MIOs (“Medical Information Objects”), which are national standards for structured datasets to enable the exchange of various medical data via the electronic health record in the future. These include topics such as medication plans, vaccination records, laboratory reports, doctors’ letters, and much more. At their core, these are technical specifications that will later lead to uniform code files that can be exchanged between systems in an interoperable manner. Ultimately, the systems can and should decide for themselves how the datasets are displayed and how they are processed. Still, we wanted to create a shortcut for read-only systems (and a design template for the remaining): My task as a UX/UI designer has therefore been to develop a set of display components that can be integrated directly into the systems, thus making the respective dataset consumable in a uniform and visually optimized manner.
+                        </p>
                     </div>
 
                     <div>
                         <h4>Process</h4>
-                        <p>The first step was to understand the supply processes, i.e., the touchpoints of the various people. Along this process, we could deepdive into more specific discussions with the different stakeholdes to derive their needs. E.g. in the context of the vaccination record, I understood that the vaccination card is not only used to check that all vaccinations have been completed, but also to gain an idea of the patient's background and history (were all standard vaccinations carried out regularly during childhood or only later? etc.). In an iterative process involving the end users, I hierarchized and organized the information, as well as designed, tested and evaluated possible value-added functionalities (filtering, searching, graphics).
-
-In addition, I built up a design library to ensure a consistent look and feel across projects.</p>
+                        <p>
+                            The first step was to understand the medical care processes, i.e., the touchpoints of the various care providers with the respective documents. Throughout this process, I have conducted in-depth discussions with multiple stakeholders to gain a deeper understanding of their specific needs. For example, in the context of the vaccination record, I understood that this document is not only used to verify if all vaccinations have been completed but also to gain an idea of the patient's background and history (were all standard vaccinations carried out regularly during childhood or only later?). Or that, in the context of the medication plan, it is more important to see as many medication entries together with the patient's most crucial health parameters at a glance than to see that many details per entry.
+                            In an iterative process involving the end users, I hierarchized and organized the information, as well as designed, tested, and evaluated possible value-added functionalities (filtering, searching, graphical views).
+                            To ensure a consistent look and feel across all MIO projects, I established a design library.
+                        </p>
                     </div>
                     <div>
                         <h4>Reflection</h4>
-                        <p>One particular challenge was that I gradually worked on the various projects and built up the design library at the same time (no one had worked on it before me), so naturally this required a lot of loops. In addition, users sometimes have different views on which information is relevant due to the different software they are used to. This often led me to provide configuration options for the display (switching between display modes, showing and hiding certain fields).
-It also turned out to be a crucial part of the work to feed findings back into the technical data model, which should be clearly understandable and not too complex to implement. Since the new electronic form of saving the information gives a lot more possiblities to provide details, the complexity must be countered by good differentiation of information levels in the UI. 
- </p>
+                        <p>
+                            One particular challenge was that users often have different opinions on which information is relevant at the first level, due to their varying scopes of activities (e.g., doctors vs. pharmacists) and individual reading habits (e.g., color markings vs. bar charts). This mostly led me to provide configuration options for the display, such as switching between view modes and dynamically showing or hiding specific fields.
+                        </p>
                     </div>
                 </section>
             </ProjectModal>

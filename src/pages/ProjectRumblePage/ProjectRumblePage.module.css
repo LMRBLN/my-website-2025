@@ -8,6 +8,26 @@
     width: auto;
 }
 
+.featuresList {
+    padding: 12px;
+    border: 1px solid var(--main-yellow);
+    display: flex;
+    flex-direction: row;
+    color: var(--main-yellow);
+    gap: 12px;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+
+.featuresList > div {
+    flex: 1;
+    min-width: 100px; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
 /* .scrollContent .animation  {
     border: 1px solid red;
     background: red;

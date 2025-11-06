@@ -11,7 +11,7 @@ function ProjectCard ({title, description, phases, image, slogan, link}) {
             <div className={styles.aboutProject}>
                 <div className={styles.titleAndDescription}>
                     <h3>{title}</h3>
-                    <p>{description}</p>
+                    <p >{description}</p>
                 </div>
                 <p className={styles.phases}>{phases}</p>
             </div>

@@ -1,0 +1,32 @@
+{
+  // --- Hauptsprache (Englisch) ---
+  "ltex.language": "en-US",
+
+  // --- Wenn du mehrere Sprachen möchtest ---
+  "ltex.enabledLanguages": ["en-US"],
+
+  // --- LTeX aktivieren ---
+  "ltex.enabled": true,
+
+  // --- Wo prüfen (du kannst hier viel stehen lassen) ---
+  "ltex.languageIds": [
+    "markdown", "plaintext",
+    "html", "xml",
+    "latex", "restructuredtext",
+    "typescript", "typescriptreact",
+    "javascript", "javascriptreact",
+    "vue", "svelte"
+  ],
+
+  // --- Optional: weniger aggressive Warnungen ---
+  "ltex.diagnosticSeverity": "information",
+
+  // --- Ignorier-Ordner für Performance ---
+  "ltex.workspaceFolderBlacklist": [
+    "node_modules",
+    "dist",
+    "build",
+    ".next",
+    ".git"
+  ]
+}
