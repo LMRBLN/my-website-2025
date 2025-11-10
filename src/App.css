@@ -32,10 +32,17 @@ a {
   text-decoration: none;
 }
 
+a,
+a:link,
 a:visited,
 a:hover,
-a:active  {
-  color: inherit
+a:active,
+a[x-apple-data-detectors],
+a[x-apple-data-detectors=true],
+a[data-dt-link],
+a[href^="tel:"],
+a[href^="mailto:"]  {
+  color: inherit;
 }
 
 .App {
