@@ -42,7 +42,8 @@ a[x-apple-data-detectors=true],
 a[data-dt-link],
 a[href^="tel:"],
 a[href^="mailto:"]  {
-  color: inherit;
+  color: inherit !important;
+  text-decoration: none !important;;
 }
 
 .App {
@@ -127,6 +128,34 @@ button {
 
 a:hover {
   cursor: pointer;
+}
+
+
+button,
+button * {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+button a,
+button a:link,
+button a:visited,
+button a:hover,
+button a:active,
+button [x-apple-data-detectors],
+button [x-apple-data-detectors="true"],
+button [data-dt-link] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* optional: iOS-Button-Defaults neutralisieren */
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--btn-bg, #111);
+  color: var(--btn-fg, #fff);
+  border: 0;
 }
 
 
