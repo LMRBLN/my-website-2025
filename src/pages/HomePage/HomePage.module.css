@@ -6,6 +6,8 @@
     align-items: flex-start;
     justify-content: center; /* Horizontal zentrieren */
     gap: 12px;
+    overflow: hidden;          
+    overscroll-behavior: none
     /* background-color: white; */
     /* background-image: url('../images/gradients.png'); */
     /* overflow: visible; */

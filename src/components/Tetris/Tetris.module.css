@@ -30,9 +30,9 @@
 
 .gameOver {
   position: absolute;
-  bottom: 0;
+  top: 144px;
   width: 100%;
-  height: 80%;
+  height: calc(100dvh - 134px);
   background: rgba(225, 224, 221, 0.8);
   display: flex;
   flex-direction: column;
@@ -66,8 +66,9 @@
 
 .help {
   position: absolute;
-  width: 95%;
-  height: 78%;
+  top: 144px;
+  width: 100%;
+  height: calc(100dvh - 134px);
   background: rgba(225, 224, 221, 0.8);
   display: flex;
   flex-direction: column;
@@ -91,6 +92,10 @@
     width: 100%;
     max-width: 500px;
     margin-top: 40px;
+  }
+
+  .help img {
+    display: none;
   }
 }
 

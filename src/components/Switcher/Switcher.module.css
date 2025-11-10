@@ -15,17 +15,21 @@
   .switcher span {
     padding: 4px 12px;
     border-radius: 11px;
-    color: var(--main-black);
+    color: var(--main-black); /* Standardfarbe explizit setzen */
   }
 
-  .switcher.on > span:first-of-type {
-    color: white;
-    background-color: var(--main-black);
+  /* .slider span {
+    color: var(--main-black);
+  } */
 
+
+  .switcher.on > span:first-of-type {
+    color: white !important; /* !important hinzufügen falls nötig */
+    background-color: var(--main-black);
   }
   
   .switcher.off > span:last-of-type {
-    color: white;
+    color: white !important; /* !important hinzufügen falls nötig */
     background-color: var(--main-black);
 
   }
@@ -33,5 +37,5 @@
   .slider {
     position: absolute;
   }
-  
+
 
