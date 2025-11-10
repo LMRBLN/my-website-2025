@@ -32,6 +32,12 @@ a {
   text-decoration: none;
 }
 
+a:visited,
+a:hover,
+a:active  {
+  color: inherit
+}
+
 .App {
   text-align: left;
   background-color: var(--main-grey);
