@@ -9,13 +9,13 @@
     transition: all 0.3s ease;
     font-size: 12px;
     font-weight: bolder;
-    color: var(--main-black);
   }
   
 
   .switcher span {
     padding: 4px 12px;
     border-radius: 11px;
+    color: var(--main-black);
   }
 
   .switcher.on > span:first-of-type {

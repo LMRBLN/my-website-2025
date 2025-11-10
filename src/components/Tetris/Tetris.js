@@ -218,7 +218,7 @@ function Tetris () {
             
 
             <div className={styles.timer}> {parseFloat(time/1000).toFixed(2)}</div>
-            <button className={styles.startButton} onClick={() => pauseHelp()}> {gameIsStarted && <> Pause / Help </> } {!gameIsStarted && gameOver && <> Play Again</>} {!gameIsStarted && !gameOver && <>   </>}</button>
+            <button className={styles.startButton} onClick={() => pauseHelp()}> {gameIsStarted && <> <p> Pause / Help </p> </> } {!gameIsStarted && gameOver && <> Play Again</>} {!gameIsStarted && !gameOver && <>   </>}</button>
 
             <div className={styles.gameBox} style={{ height: gameHeight, width: gameWidth }}>
 
