@@ -1,7 +1,7 @@
 .content {
     grid-column: 5 / 9;
     padding-top: 40px;
-    height: calc(100vh - 154px); /* Höhe abzüglich Navbar und Footer */
+    height: calc(100dvh - 154px); /* Höhe abzüglich Navbar und Footer */
     overflow-y: auto; /* Vertikales Scrollen erlauben */
     overflow-x: hidden; /* Horizontales Scrollen verhindern */
     /* Hide scrollbar while keeping scrolling */

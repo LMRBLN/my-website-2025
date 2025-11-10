@@ -12,7 +12,7 @@
 } */
 
 .content {
-    height: calc(100vh - 144px);
+    height: calc(100dvh - 144px);
     grid-column: 1 / 13;
     display: flex;
     padding-top: 20px;
@@ -43,7 +43,7 @@
 
     .content {
         align-items: center;
-        height: calc(100vh - 194px); /* Höhe minus padding minus navbar minus footer */
+        height: calc(100dvh - 194px); /* Höhe minus padding minus navbar minus footer */
     }
 
     .container {
@@ -66,7 +66,7 @@
 @media (min-width:768px) {
 
     .content {
-        height: calc(100vh - 154px); /* Höhe minus padding minus navbar minus footer */
+        height: calc(100dvh - 154px); /* Höhe minus padding minus navbar minus footer */
     }
 
     .container {

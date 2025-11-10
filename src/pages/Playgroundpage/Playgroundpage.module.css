@@ -1,5 +1,5 @@
 .content {
-    min-height: calc(100vh - 154px);
+    min-height: calc(100dvh - 154px);
     grid-column: 1 / 13;
 
 }
@@ -47,14 +47,15 @@
 
 @media screen and (max-width: 768px) {
     .content {
-        min-height: calc(100vh - 194px); /* Höhe minus padding minus navbar minus footer */
+        min-height: calc(100dvh - 194px); /* Höhe minus padding minus navbar minus footer */
     }
   }
 
   @media screen and (max-width: 481px) {
     .content {
-        min-height: calc(100vh - 144px); /* Höhe minus padding minus navbar minus footer */
+        min-height: calc(100dvh - 144px); /* Höhe minus padding minus navbar minus footer */
     }
+
   }
 
 
