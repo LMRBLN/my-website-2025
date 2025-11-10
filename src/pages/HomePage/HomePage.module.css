@@ -22,6 +22,7 @@
 
   @media screen and (max-width: 481px) {
     .content {
-        min-height: calc(100vh - 144px); /* Höhe minus padding minus navbar minus footer */
+        /* min-height: calc(100vh - 144px);  */
+        min-height: 100dvh;
     }
   }
