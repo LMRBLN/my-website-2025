@@ -27,11 +27,19 @@
     color: white !important; /* !important hinzufügen falls nötig */
     background-color: var(--main-black);
   }
+
+  .switcher.off > span:first-of-type {
+    color: var(--main-black) !important; /* !important hinzufügen falls nötig */
+  }
   
   .switcher.off > span:last-of-type {
     color: white !important; /* !important hinzufügen falls nötig */
     background-color: var(--main-black);
 
+  }
+
+    .switcher.on > span:last-of-type {
+    color: var(--main-black) !important; /* !important hinzufügen falls nötig */
   }
   
   .slider {
