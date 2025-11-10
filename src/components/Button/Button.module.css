@@ -10,6 +10,7 @@ button {
 }
 
 .secondary {
+    color: var(--main-black);
     padding: 7px 19px;
     border: 1px solid var(--main-black);
     background-color: transparent;

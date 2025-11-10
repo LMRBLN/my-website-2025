@@ -23,6 +23,6 @@
   @media screen and (max-width: 481px) {
     .content {
         /* min-height: calc(100vh - 144px);  */
-        min-height: 100dvh;
+        min-height: calc(100dvh - 144px);
     }
   }
