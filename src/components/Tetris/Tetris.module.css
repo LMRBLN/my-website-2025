@@ -26,13 +26,14 @@
 .startButton {
   position: absolute;
   right: 20%;
+  z-index: 10;
 }
 
 .gameOver {
   position: absolute;
   top: 144px;
   width: 100%;
-  height: calc(100dvh - 134px);
+  height: calc(100dvh - 144px);
   background: rgba(225, 224, 221, 0.8);
   display: flex;
   flex-direction: column;
@@ -41,6 +42,7 @@
   font-size: 150px;
   font-family: 'Unica One', cursive;
   text-align: center;
+  z-index: 100;
 }
 
 .gameOver span {
@@ -68,7 +70,7 @@
   position: absolute;
   top: 144px;
   width: 100%;
-  height: calc(100dvh - 134px);
+  height: calc(100dvh - 144px);
   background: rgba(225, 224, 221, 0.8);
   display: flex;
   flex-direction: column;

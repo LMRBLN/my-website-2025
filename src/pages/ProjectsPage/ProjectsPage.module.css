@@ -39,6 +39,8 @@
 
 }
 
+
+
 @media (min-width:481px) {
 
     .content {
@@ -77,4 +79,7 @@
         width: 100%;
         /* Keine feste Höhe, damit der Scrollbereich der .content greift */
     }
+
+
+
 }

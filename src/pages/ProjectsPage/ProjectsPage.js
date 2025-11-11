@@ -19,7 +19,6 @@ function ProjectsPage() {
                         />
                     </div>
                 ))}
-            {/* <Footer/> */}
             </div>
         </div>
     )

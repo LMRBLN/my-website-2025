@@ -8,6 +8,8 @@
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
 
+
+
 }
 
 .myJourney {
@@ -128,6 +130,7 @@
 
     .content {
         grid-column: 2 / 12;
+        height: calc(100dvh - 194px); /* Höhe abzüglich Navbar und Footer */
     }
 
 }
@@ -137,6 +140,7 @@
     .content{
         grid-column: 1 / 13;
         height: calc(100dvh - 144px); /* Höhe abzüglich Navbar und Footer */
+        /* border: 1px solid red; */
 
     }
 

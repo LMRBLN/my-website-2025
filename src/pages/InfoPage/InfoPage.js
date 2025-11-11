@@ -18,7 +18,8 @@ function InfoPage() {
                     <img src={PictureLaraRockenstein} alt="Lara Rockenstein" />
                 </div>
                 <div className={styles.text}>
-                    {/* <h3 className={styles.title}> My journey </h3> */}
+
+                    {/* <h3 className={styles.title}> Who am I and how did I get here? </h3> */}
                     {/* <p>
                         My journey started on the technical side: during my studies of engineering sciences, I learned to acquire new fields in a short time, eg. by abstracting principles instead of memorizing details, and not being afraid of things looking complex in the beginning.
                     </p>
