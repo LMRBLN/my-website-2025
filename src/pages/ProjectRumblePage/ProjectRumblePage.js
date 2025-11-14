@@ -34,7 +34,7 @@ function ProjectRumblePage() {
                     </div>
                     <div>
                         <h4>Idea</h4>
-                        <p className="quote">
+                        <p className="highlighted">
                             Say goodbye to hundreds of different group chats, exploding messages, and discussions. View and plan all your events in one place with your friends and decide on details democratically, or even plan a private poll to decide on a gift for the host.
                         </p>
                     </div>

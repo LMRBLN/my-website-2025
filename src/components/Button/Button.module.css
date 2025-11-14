@@ -1,18 +1,36 @@
 button {
     white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
 }
+
 .primary {
     color: white;
-    padding: 8px 20px;
     background-color: var(--main-black);
-    border-radius: 2px;
-    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.20);
+    padding: 8px 20px;
+    box-shadow: var(--shadowSmall);
 }
 
 .secondary {
     color: var(--main-black);
+    background-color: transparent;
     padding: 7px 19px;
     border: 1px solid var(--main-black);
-    background-color: transparent;
-    border-radius: 2px;
+}
+
+.icon path {
+  fill: currentColor;
+}
+
+button:hover .icon {
+  animation: bounce-right 0.25s cubic-bezier(.3,1.4,.5,1) 1;
+}
+
+@keyframes bounce-right {
+  0%   { transform: translateX(0); }
+  35%  { transform: translateX(3px); }
+  65%  { transform: translateX(4px); }
+  85%  { transform: translateX(2px); }
+  100% { transform: translateX(0); }
 }

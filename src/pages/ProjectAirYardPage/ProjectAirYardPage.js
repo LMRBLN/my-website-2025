@@ -20,7 +20,7 @@ function ProjectAirYardPage() {
                     </div>
                     <div>
                         <h4>Idea</h4>
-                        <p className="quote">
+                        <p className="highlighted">
                             The inflatable playpen not only responds to the toddler's needs. In a world where mobility and flexibility are more and more important, it allows the parents to organize and participate in (outdoor) activities without worrying about their child's security.
                         </p>
                     </div>

@@ -10,14 +10,24 @@
 
 }
 
-
 .navbar a {
     margin: 0;
-    background: none;           /* entferne das rote Hintergrund-Fallback */
-    /* display: inline-flex;        */
-    align-items: center;        /* zentriert Inhalt (z.B. img) vertikal */
-    padding: 0;                 /* optional: keine Innenabstände */
+    background: none;           
+    align-items: center;       
+    padding: 0;                
     text-decoration: none;
+    display: inline-block; 
+    transition: transform 0.2s ease;
+}
+
+.navbar a:hover {
+    animation: bounce-down 0.25s cubic-bezier(0.25, 0.6, 0.4, 1) 1;
+}
+
+@keyframes bounce-down {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(0.5px); }
+  100% { transform: translateY(0); }
 }
 
 .navbar img {
@@ -36,18 +46,6 @@
     justify-content: center;
 }
 
-.navInfo {
-
-}
-
-.navTimeout {
-    display: none;
-}
-
-/* img, a {
-    padding: 0;
-    margin: 0;
-} */
 
 
 @media screen and (max-width: 768px) {
@@ -61,7 +59,6 @@
         top: 60px;
     }
 
-
 }
 
 
@@ -70,23 +67,5 @@
     .navbar {
         padding-bottom: 70px;
     }   
-
-    /* .linksbar {
-        padding-left: 0;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 12px;
-        padding-right: 12px;
-        position: absolute;
-        width: 100%;
-        display: flex;
-        overflow-x: auto;     /
-        scroll-snap-type: x mandatory;
-        top: 40px;
-        justify-content: left;
-        -ms-overflow-style: none;     
-        scrollbar-width: none;        
-    } */
-
 
 }

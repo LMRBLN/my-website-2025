@@ -3,12 +3,10 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import HomePage from './pages/HomePage/HomePage';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
-import SnippetsPage from './pages/SnippetsPage/SnippetsPage';
 import PlaygroundPage from './pages/Playgroundpage/PlaygroundPage';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import InfoPage from './pages/InfoPage/InfoPage';
-import TimeoutPage from './pages/TimeoutPage/TimeoutPage';
 import ProjectMioViewerPage from './pages/ProjectMioViewerPage/ProjectMioViewerPage';
 import ProjectRumblePage from './pages/ProjectRumblePage/ProjectRumblePage';
 import ProjectGiraffePage from './pages/ProjectGiraffePage/ProjectGiraffePage';
@@ -19,8 +17,8 @@ import ProjectAirYardPage from './pages/ProjectAirYardPage/ProjectAirYardPage';
 
 function App() {
 
-  const [background, setBackground] = useState('');
-  const location = useLocation(); // <== wichtig!
+  const [background, setBackground] = useState('greyBackground');
+  const location = useLocation();
 
   useEffect(() => {
     const path = location.pathname;
@@ -29,23 +27,25 @@ function App() {
       case '/':
         setBackground('homeBackground');
         break;
-      case '/info':
-        setBackground('greyBackground');
-      case '/projects':
-        setBackground('greyBackground');
-        break;
-      // case '/timeout':
-      //   setBackground('homeBackground');
+      // case '/info':
+      //   setBackground('greyBackground');
+      //   break;
+      // case '/projects':
+      //   setBackground('greyBackground');
+      //   break;
+      // case '/playground':
+      //   setBackground('greyBackground');
       //   break;
       default:
-        setBackground('');
+        setBackground('greyBackground');
         break;
     }
-  }, [location.pathname]); // <== wichtig: reagieren auf Pfadänderung
+  }, [location.pathname]);
+
   return (
         <div className={`App ${background}`}>
           <Navbar/>
-          <div className="pageContent">
+          <div className="appLayout">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/projects" element={<ProjectsPage />} />
@@ -55,9 +55,7 @@ function App() {
               <Route path="/projects/securitycentral" element={<ProjectSecurityCentralPage />} />
               <Route path="/projects/algaekit" element={<ProjectAlgaeKitPage />} />
               <Route path="/projects/airyard" element={<ProjectAirYardPage />} />
-              <Route path="/snippets" element={<SnippetsPage />} />
               <Route path="/playground" element={<PlaygroundPage />} />
-              <Route path="/timeout" element={<TimeoutPage />} />
               <Route path="/info" element={<InfoPage />} />
             </Routes>
           </div>

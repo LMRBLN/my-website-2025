@@ -1,11 +1,9 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import pdfjsWorker from "pdfjs-dist/build/pdf.worker.min.mjs?url";
 import styles from "./Flipbook.module.css";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-
 
 function FlipBook({ file, className, onPageChange }) {
   const [numPages, setNumPages] = useState(null);

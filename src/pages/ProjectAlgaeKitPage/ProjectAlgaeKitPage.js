@@ -1,6 +1,5 @@
 import ProjectModal from "../../components/ProjectModal/ProjectModal";
 import styles from "./ProjectAlgaeKitPage.module.css"
-// import Booklet from "../../components/Booklet/Booklet";
 import FlipBook from "../../components/Flipbook/Flipbook";
 import AlgaeKitPDF from "../../data/booklet_algae_de_schriftenersetzt.pdf";
 
@@ -19,7 +18,7 @@ function ProjectAlgaeKitPage() {
                     </div>
                     <div>
                         <h4>Idea</h4>
-                        <p className="quote">
+                        <p className="highlighted">
                             The alga can be used to illustrate various sustainability topics relevant to the future. With the experimentation kit, children can learn about biological principles and their own role in the environment in a playful way at an early age. Embedded in a fantasy game story, they undergo various experiments, levels, and topics, overseeing the cultivation and harvest of algae.
                         </p>
                     </div>
