@@ -29,7 +29,7 @@ function App() {
         setBackground('homeBackground');
         break;
       case '/timeout':
-        setBackground('timeoutBackground');
+        setBackground('greyBackground');
         break;
       default:
         setBackground('greyBackground');
