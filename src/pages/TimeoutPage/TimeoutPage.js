@@ -15,7 +15,7 @@ function TimeoutPage() {
                 <source src="/videos/gradients.mov" type="video/mp4" />
                 </video>
             </div>
-            <a href="/" className={styles.link}>go back</a> 
+            <a href="/" className={styles.goBackLink}>go back</a> 
         </div>
     );
 }
