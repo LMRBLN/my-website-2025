@@ -1,85 +1,58 @@
-/* @media screen and (min-width:481px) {
-    .aboutProject {
-        
-    }
-} */
-
-
-/* @media screen and (min-width:904px) {
-    .aboutProject {
-        
-    }
-} */
-
 .content {
-    height: calc(100dvh - 144px);
     grid-column: 1 / 13;
     display: flex;
     padding-top: 20px;
-    overflow-y: auto; /* Bereich vertikal scrollbar machen */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling auf iOS */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    align-items: center;
 }
 
-
-
 .element {
-    height: 200px;      /* Nimmt volle Höhe der Grid-Zelle ein */
+    height: 100%;     
     box-sizing: border-box;
-    overflow: hidden; /* überschüssiger Inhalt wird abgeschnitten */
+    overflow: hidden; 
 }
 
 .container {
     display: grid;
-    gap: 20px; /* Abstand zwischen den Elementen */
+    gap: 20px;
     width: 100%;
     max-height: 70vh;
-    /* Höhe vom übergeordneten Scrollbereich bestimmen lassen */
-
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);    
+    gap: 20px; 
+    width: 100%;
 }
 
 
-
-@media (min-width:481px) {
-
+ @media (max-width: 768px) {
+    
     .content {
-        align-items: center;
-        height: calc(100dvh - 194px); /* Höhe minus padding minus navbar minus footer */
+        align-items: flex-start;
     }
 
     .container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 Spalten */
-        grid-template-rows: repeat(2, 1fr);    /* 2 Reihen */
-        gap: 20px; /* Abstand zwischen den Elementen */
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(6, 1fr);    
+        gap: 15px; 
         width: 100%;
-        /* Keine feste Höhe, damit der Scrollbereich der .content greift */
-
     }
 
     .element {
-        height: 100%;      /* Nimmt volle Höhe der Grid-Zelle ein */
-        box-sizing: border-box;
-        overflow: hidden; /* überschüssiger Inhalt wird abgeschnitten */
+        height: 300px;      
+        overflow: hidden; 
     }
-}
+ }
 
-@media (min-width:768px) {
 
-    .content {
-        height: calc(100dvh - 154px); /* Höhe minus padding minus navbar minus footer */
+ @media (max-width: 481px) {
+
+    .element {
+        height: 200px;      
+        overflow: hidden; 
     }
-
-    .container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr); /* 3 Spalten */
-        grid-template-rows: repeat(2, 1fr);    /* 2 Reihen */
-        gap: 20px; /* Abstand zwischen den Elementen */
-        width: 100%;
-        /* Keine feste Höhe, damit der Scrollbereich der .content greift */
-    }
-
-
-
-}
+ }

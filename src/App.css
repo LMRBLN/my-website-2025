@@ -62,10 +62,13 @@ a[href^="mailto:"]  {
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
   min-height: calc(100dvh - 154px);
-}
-
-.pageContentFullScreen {
-  /* border: 10px solid green; */
+  max-height: calc(100dvh - 154px);
+  /* height: calc(100dvh - 154px); */
+  padding-bottom: 8px;
+  /* overflow-y: auto; 
+  overflow-x: hidden;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; */
 }
 
 .homeBackground {
@@ -76,6 +79,10 @@ a[href^="mailto:"]  {
 
 .greyBackground {
   background-image: none;
+}
+
+.timeoutBackground {
+  background-color: transparent;
 }
 
 h1 {
@@ -146,7 +153,8 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .appLayout {
-    min-height: calc(100dvh - 194px);
+    min-height: calc(100dvh - 192px);
+    max-height: calc(100dvh - 192px);
   }
 }
 
@@ -157,5 +165,6 @@ a:hover {
 
   .appLayout {
     min-height: calc(100dvh - 144px);
+    max-height: calc(100dvh - 144px);
   }
 }

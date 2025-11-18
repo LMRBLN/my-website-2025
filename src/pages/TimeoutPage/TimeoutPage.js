@@ -1,15 +1,20 @@
 import styles from './TimeoutPage.module.css';
 
 function TimeoutPage() {
-    function handleReload() {
-        window.location.reload();
-    }
 
     return (
         <div className={styles.content}>
+            <video
+                className={styles.backgroundVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                >
+            <source src="/videos/gradients.mov" type="video/mp4" />
+            </video>
 
-            {/* <button onClick={handleReload}>go back</button> */}
-            <a href="/" className={styles.link}>go back</a>
+            <a href="/" className={styles.link}>go back</a> 
         </div>
     );
 }

@@ -13,6 +13,7 @@ import ProjectGiraffePage from './pages/ProjectGiraffePage/ProjectGiraffePage';
 import ProjectSecurityCentralPage from './pages/ProjectSecurityCentralPage/ProjectSecurityCentralPage';
 import ProjectAlgaeKitPage from './pages/ProjectAlgaeKitPage/ProjectAlgaeKitPage';
 import ProjectAirYardPage from './pages/ProjectAirYardPage/ProjectAirYardPage';
+import TimeoutPage from './pages/TimeoutPage/TimeoutPage';
 
 
 function App() {
@@ -27,15 +28,9 @@ function App() {
       case '/':
         setBackground('homeBackground');
         break;
-      // case '/info':
-      //   setBackground('greyBackground');
-      //   break;
-      // case '/projects':
-      //   setBackground('greyBackground');
-      //   break;
-      // case '/playground':
-      //   setBackground('greyBackground');
-      //   break;
+      case '/timeout':
+        setBackground('timeoutBackground');
+        break;
       default:
         setBackground('greyBackground');
         break;
@@ -56,6 +51,7 @@ function App() {
               <Route path="/projects/algaekit" element={<ProjectAlgaeKitPage />} />
               <Route path="/projects/airyard" element={<ProjectAirYardPage />} />
               <Route path="/playground" element={<PlaygroundPage />} />
+              <Route path="/timeout" element={<TimeoutPage />} />
               <Route path="/info" element={<InfoPage />} />
             </Routes>
           </div>

@@ -1,9 +1,9 @@
 import styles from "./Footer.module.css"
 
-function Footer ({height}) {
+function Footer() {
     return (
         <div className={styles.footer}>
-            <span>&copy; </span> 2025 Lara Rockenstein
+            <span>&copy;</span> 2025 Lara Rockenstein
         </div>
     )
 }

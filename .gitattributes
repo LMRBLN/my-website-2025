@@ -1,3 +1,4 @@
 *.gif filter=lfs diff=lfs merge=lfs -text
 src/images/project_rumble_animation.gif filter=lfs diff=lfs merge=lfs -text
 src/images/project_giraffe_animation.gif filter=lfs diff=lfs merge=lfs -text
+public/videos/gradients.mov filter=lfs diff=lfs merge=lfs -text

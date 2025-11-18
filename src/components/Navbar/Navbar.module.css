@@ -46,6 +46,14 @@
     justify-content: center;
 }
 
+.logo {
+    height: 20px;
+}
+
+.navTimeout {
+    opacity: 0;
+}
+
 
 
 @media screen and (max-width: 768px) {

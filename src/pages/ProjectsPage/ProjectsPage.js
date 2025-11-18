@@ -1,7 +1,6 @@
 import styles from "./ProjectsPage.module.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import projectsData from "../../data/projects.json";
-import Footer from "../../components/Footer/Footer";
 
 function ProjectsPage() {
     return (
