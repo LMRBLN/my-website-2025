@@ -10,6 +10,7 @@ function ProjectGiraffePage() {
     setGifKey((prev) => prev + 1);
   }, []);
 
+
   useEffect(() => {
     const img = new Image();
     img.src = Animation;
@@ -20,7 +21,7 @@ function ProjectGiraffePage() {
       <ProjectModal id="giraffe">
         <section>
           <img
-            key={gifKey}                           
+            key={gifKey}                           // ← sorgt dafür, dass das <img> neu gemountet wird
             id="projectGiraffeAnimation"
             className={styles.image}
             src={Animation}                        // ← kein ?b=Date.now() mehr
@@ -29,14 +30,14 @@ function ProjectGiraffePage() {
           />
           <div>
             <h4>Context</h4>
-            <p>
+            <p >
               This project was the second of three main deliverables during my 3-month coding boot camp at Ironhack. I collaborated with one fellow student. We worked on this project for one week.
             </p>
           </div>
 
           <div>
             <h4>Idea</h4>
-            <p>
+            <p className="highlighted"> 
               Who always stays on top of things? Giraffe is a tool that helps you keep an overview of your shopping plans. You can see all your items of interest in one place. Just paste the link to the item, and a product card will be automatically created. Save and organize your items in a list. This way, you can easily compare items from different vendors and thus make more informed buying decisions.
             </p>
           </div>
