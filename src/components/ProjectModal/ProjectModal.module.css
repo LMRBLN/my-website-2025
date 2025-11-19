@@ -18,7 +18,7 @@
     position: absolute;
     width: calc(100vw - 80px);
     top: 40px;
-    height: calc(100dvh - 400px);
+    height: calc(100dvh - 80px);
     overflow: hidden; 
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@
     overflow: hidden; 
     position: relative;
     /* height: calc(100% +20px); */
-    height: calc(100vh - 80px - 60px);
+    height: calc(100dvh - 80px - 60px);
 }
 
 .image {
@@ -216,7 +216,7 @@
     .content {
         width: calc(100vw - 40px);
         top: 20px;
-        height: calc(100vh - 40px);
+        height: calc(100dvh - 40px);
     }
 
     .scrollContent section > * {
@@ -227,7 +227,7 @@
         overflow: hidden; 
         position: relative;
         /* height: calc(100% +20px); */
-        height: calc(100vh - 80px - 20px);
+        height: calc(100dvh - 80px - 20px);
     }
  }
 
