@@ -3,7 +3,16 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import styles from "./Flipbook.module.css";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+
+// Variante für CRA (Create React App)
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.mjs',
+  import.meta.url,
+).toString();
+
+// pdfjs.GlobalWorkerOptions.workerSrc =
+//   "https://unpkg.com/pdfjs-dist@5.4.296/build/pdf.worker.min.js";
 
 function FlipBook({ file, className, onPageChange }) {
   const [numPages, setNumPages] = useState(null);

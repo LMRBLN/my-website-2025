@@ -173,9 +173,6 @@
     font-size: 11px;
 }
 
-.scrollContent img {
-
-}
  .scrollContent a {
     display: block;
     padding-bottom: 12px;
@@ -229,15 +226,8 @@
         /* height: calc(100% +20px); */
         height: calc(100dvh - 80px - 20px);
     }
+
+    .slogan {
+        font-size: 24px;
+    }
  }
-
-
-
-
-/* .scrollContent .animation  {
-    border: 1px solid red;
-} */
-
-
-/* removed empty h4 rule */
-
