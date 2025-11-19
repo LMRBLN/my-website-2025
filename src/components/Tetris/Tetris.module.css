@@ -27,6 +27,8 @@
   position: absolute;
   right: 20%;
   z-index: 10;
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 .gameOver {

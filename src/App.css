@@ -16,7 +16,6 @@ html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   overscroll-behavior: none;
-  
 }
 
 * {
@@ -28,10 +27,10 @@ html, body {
   box-sizing: border-box;
 }
 
-a {
+/* a {
   color: inherit;
   text-decoration: none;
-}
+} */
 
 a,
 a:link,
@@ -44,7 +43,7 @@ a[data-dt-link],
 a[href^="tel:"],
 a[href^="mailto:"]  {
   color: inherit !important;
-  text-decoration: none !important;;
+  text-decoration: none !important;
 }
 
 .App {
@@ -57,7 +56,6 @@ a[href^="mailto:"]  {
   font-size: 12px;
   background-color: var(--main-grey);
   width: 100vw;
-    /* overscroll-behavior: none; */
 }
 
 .appLayout {
