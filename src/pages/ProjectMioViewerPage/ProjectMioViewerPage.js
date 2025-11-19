@@ -13,10 +13,9 @@ function ProjectMioViewerPage() {
             setGifBustParam(Date.now());
         }, []);
 
-        const handleSelect = (animation) => {
-            setSelectedAnimation(animation);
-            setGifBustParam(Date.now()); // startet GIF neu beim Wechsel
-        }
+       const handleSelect = (animation) => {
+        setSelectedAnimation(animation);
+        };
 
     return (
         <div className={styles.content}>
@@ -30,17 +29,26 @@ function ProjectMioViewerPage() {
                         onClick={handleRestartGif}
                     />
                     <div className={styles.projectButtons}>
-                        <button 
-                            onClick={() => handleSelect(Animation_Impfpass)}
-                        > <p> Impfpass </p></button>
+            <button 
+            onClick={() => handleSelect(Animation_Impfpass)}
+            className={selectedAnimation === Animation_Impfpass ? styles.activeButton : ""}
+            >
+            <p>Impfpass</p>
+            </button>
 
-                        <button 
-                            onClick={() => handleSelect(Animation_Medikationsplan)}
-                        ><p> Medikationsplan </p></button>
+            <button 
+            onClick={() => handleSelect(Animation_Medikationsplan)}
+            className={selectedAnimation === Animation_Medikationsplan ? styles.activeButton : ""}
+            >
+            <p>Medikationsplan</p>
+            </button>
 
-                        <button 
-                            onClick={() => handleSelect(Animation_Laborbefund)}
-                        ><p> Laborbefund </p></button>
+            <button 
+            onClick={() => handleSelect(Animation_Laborbefund)}
+            className={selectedAnimation === Animation_Laborbefund ? styles.activeButton : ""}
+            >
+            <p>Laborbefund</p>
+            </button>
                     </div>
 
                     <div>

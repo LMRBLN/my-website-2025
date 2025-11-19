@@ -17,7 +17,12 @@
     justify-content: center;
     font-family: inherit;
 }
-.projectButtons button {
+.projectButtons button{
     color: inherit !important;
     text-decoration: none !important;
+}
+
+.activeButton p {
+    font-weight: bolder;
+
 }
