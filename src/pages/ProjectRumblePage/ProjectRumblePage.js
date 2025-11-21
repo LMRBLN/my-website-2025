@@ -10,7 +10,6 @@ function ProjectRumblePage() {
     setGifKey((prev) => prev + 1);
   }, []);
 
-  // Optional: Preload, damit es beim ersten Mal schneller da ist
   useEffect(() => {
     const img = new Image();
     img.src = Animation;
@@ -21,10 +20,10 @@ function ProjectRumblePage() {
       <ProjectModal id="rumble">
         <section>
           <img
-            key={gifKey} // sorgt dafür, dass das <img> neu gemountet wird
+            key={gifKey} 
             id="projectRumbleAnimation"
             className={styles.image}
-            src={Animation} // kein ?b=Date.now() mehr
+            src={Animation} 
             alt="Rumble project animation"
             onClick={handleRestartGif}
           />

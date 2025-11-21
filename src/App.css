@@ -64,13 +64,7 @@ a[href^="mailto:"]  {
   gap: 20px;
   min-height: calc(100dvh - 154px);
   max-height: calc(100dvh - 154px);
-  /* height: calc(100dvh - 154px); */
   padding-bottom: 8px;
-    /* overscroll-behavior: none; */
-  /* overflow-y: auto; 
-  overflow-x: hidden;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; */
 }
 
 .homeBackground {
@@ -132,6 +126,7 @@ button * {
   text-decoration: none !important;
 }
 
+button,
 button h2,
 button span,
 button p,
@@ -143,8 +138,8 @@ button a:active,
 button [x-apple-data-detectors],
 button [x-apple-data-detectors="true"],
 button [data-dt-link] {
-  color: inherit !important;
-  text-decoration: none !important;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover {

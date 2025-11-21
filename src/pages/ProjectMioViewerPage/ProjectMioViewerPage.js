@@ -3,7 +3,7 @@ import styles from "./ProjectMioViewerPage.module.css";
 import Animation_Impfpass from "../../images/impfpass.gif";
 import Animation_Medikationsplan from "../../images/medikationsplan.gif";
 import Animation_Laborbefund from "../../images/laborbefund.gif"; 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 function ProjectMioViewerPage() {
 
@@ -13,9 +13,27 @@ function ProjectMioViewerPage() {
             setGifBustParam(Date.now());
         }, []);
 
+        const [isLoading, setIsLoading] = useState(false);
+
        const handleSelect = (animation) => {
+        setIsLoading(true);
         setSelectedAnimation(animation);
         };
+
+        
+
+        useEffect(() => {
+        const animations = [
+            Animation_Impfpass,
+            Animation_Medikationsplan,
+            Animation_Laborbefund,
+        ];
+
+        animations.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+        }, []);
 
     return (
         <div className={styles.content}>
@@ -26,8 +44,10 @@ function ProjectMioViewerPage() {
                         className={styles.image}
                         src={`${selectedAnimation}?b=${gifBustParam}`}
                         alt="Rumble project animation"
+                        onLoad={() => setIsLoading(false)}
                         onClick={handleRestartGif}
                     />
+                    {isLoading && <p>Loading…</p>}
                     <div className={styles.projectButtons}>
             <button 
             onClick={() => handleSelect(Animation_Impfpass)}

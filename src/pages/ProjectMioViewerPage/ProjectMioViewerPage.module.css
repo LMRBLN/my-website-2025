@@ -4,7 +4,6 @@
 }
 
 .image {
-    /* border: 1px solid var(--main-grey); */
     overflow: hidden;
     height: auto;
     box-shadow: 3px 3px 8px 7px rgba(0,0,0,0.05);
