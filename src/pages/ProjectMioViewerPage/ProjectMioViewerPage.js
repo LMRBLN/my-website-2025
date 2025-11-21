@@ -47,7 +47,8 @@ function ProjectMioViewerPage() {
                         onLoad={() => setIsLoading(false)}
                         onClick={handleRestartGif}
                     />
-                    {isLoading && <p>Loading…</p>}
+                    {isLoading && <p className='loading'>Loading…</p>}
+
                     <div className={styles.projectButtons}>
             <button 
             onClick={() => handleSelect(Animation_Impfpass)}
