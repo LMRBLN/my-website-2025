@@ -42,18 +42,15 @@
 .scrollContent {
     overflow-y: auto;
     flex: 1 1 auto;
-    min-height: 0; /* notwendig für Scrollen im Flex-Child */
+    min-height: 0;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
 }
-
-
 
 .imageWrapper {
     overflow: hidden; 
     position: relative;
-    /* height: calc(100% +20px); */
     height: calc(100dvh - 80px - 60px);
 }
 
@@ -68,9 +65,9 @@
 .imageWrapper::after {
   content: "";
   position: absolute;
-  inset: 0; /* = top: 0; right: 0; bottom: 0; left: 0 */
+  inset: 0;
   background-color: var(--main-grey);
-  opacity: 70%;; /* 👈 transparentes Schwarz */
+  opacity: 70%;
   pointer-events: none;
 }
 
@@ -106,7 +103,7 @@
     align-items: baseline;
     gap: 10px;
     flex: 1;  
-    min-width: 0;  /* wichtig: erlaubt Kindelementen zu schrumpfen */
+    min-width: 0;  
   }
 
   .titleAndDescription :nth-child(1) {
@@ -121,22 +118,11 @@
     flex: 1;  
   }
 
-/* .titleAndDescription :nth-child(2), {
-    white-space: nowrap;
-    overflow: hidden;
-    display: block; } 
-*/
-
 .phasesAndClose {
     display: flex;
     gap: 20px;
     align-items: center;
 }
-
-/* .aboutProject p {
-    font-weight: normal;
-} */
-
 
 .scrollContent section {
     padding-top: 20px;
@@ -220,7 +206,6 @@
     .imageWrapper {
         overflow: hidden; 
         position: relative;
-        /* height: calc(100% +20px); */
         height: calc(100dvh - 80px - 20px);
     }
 

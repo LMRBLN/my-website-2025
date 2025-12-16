@@ -4,27 +4,14 @@ import IdeaSketching from "../../images/securitycentral_ideasketching.png";
 import Wireframes from "../../images/securitycentral_wireframes.png";
 import Reports from "../../images/securitycentral_reports.png";
 import Research from "../../images/securitycentral_userresearch.png";
-import { useState, useCallback } from "react";
 
 function ProjectSecurityCentralPage() {
-
-        const [gifBustParam, setGifBustParam] = useState(0);
-        const handleRestartGif = useCallback(() => {
-            setGifBustParam(Date.now());
-        }, []);
 
     return (
         <div className={styles.content}>
 
             <ProjectModal id="securitycentral">
                 <section>
-                    {/* <img 
-                        id="projectRumbleAnimation" 
-                        className={styles.image}
-                        src={`${Animation}?b=${gifBustParam}`}
-                        alt="Rumble project animation"
-                        onClick={handleRestartGif}
-                    /> */}
                     <div>
                         <h4>Context</h4>
                         <p>

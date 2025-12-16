@@ -1,16 +1,13 @@
 import { useEffect, useState } from 'react';
-import checkAndClear from '../../helpers/checkAndClear';
+import checkAndClear from './checkAndClear';
 import keyboard from '../../images/keyboard.svg'
 import styles from './Tetris.module.css';
 import Button from '../Button/Button';
 
-// Audio for drop sound
 const dropSound = new Audio('/files/drop-sound.wav');
-// Audio for clear sound
 const clearSound = new Audio('/files/clear-sound.wav');
 
-// Constants for the setup
-const ASPECT_RATIO = 2; // height:width = 2:1
+const ASPECT_RATIO = 2; 
 const GAME_WIDTH = 100;
 const GAME_HEIGHT = 200;
 
@@ -18,28 +15,18 @@ const BOX_X = 5;
 const BOX_Y = 20;
 
 const COLOR_ARR = ['#B33951', '#91C7B1', '#F1F7ED', '#E3D081','#918284']
-// const boxArr = [["red"],["blue"],["red"],["blue"],["red"]]
-// let boxArr = Array(5).fill(0).map(row => new Array(5).fill("red"));
-// let boxArr = Array(5).fill(0).map(row => new Array(1).fill("red"));
 let boxArrInit = [[],[],[],[],[]];
-// boxArr[0][0] = "blue";
-// console.log("The whole array is:", boxArr)
-// console.log("The first box is:", boxArr[0][0])
-
-
 
 function Tetris () {
 
     const [boxArr, setBoxArr] = useState(boxArrInit);
     const [gameIsStarted, setGameIsStarted] = useState(true);
     
-    // Responsive sizing state
     const [gameWidth, setGameWidth] = useState(GAME_WIDTH);
     const [gameHeight, setGameHeight] = useState(GAME_HEIGHT);
     const [boxWidth, setBoxWidth] = useState(GAME_WIDTH / BOX_X);
     const [boxHeight, setBoxHeight] = useState(GAME_HEIGHT / BOX_Y);
     
-    // Update sizes on load and resize while keeping aspect ratio of 2:1 (height:width)
     useEffect(() => {
         const updateSizes = () => {
             const maxWidthFromViewport = window.innerWidth * 0.9;
@@ -198,8 +185,6 @@ function Tetris () {
                 setTime(0);
                 setHelp(false);
 
-
-                // setRender(!render);
             }
             if (help) {
                 setHelp(false);
@@ -215,8 +200,6 @@ function Tetris () {
                 <button onClick={()=> setGameIsStarted(true)}> START </button>
                 <button onClick={()=> setGameIsStarted(false)}> STOP </button>
             </div> */}
-            
-
             <div className={styles.timer}> {parseFloat(time/1000).toFixed(2)}</div>
             <button className={styles.startButton} onClick={() => pauseHelp()}> {gameIsStarted && <> <p> Pause / Help </p> </> } {!gameIsStarted && gameOver && <> Play Again</>} {!gameIsStarted && !gameOver && <>   </>}</button>
 
@@ -235,12 +218,8 @@ function Tetris () {
 
 
                 {boxArr.map((column, xindex) => {
-                    {/* console.log(xindex); */}
-                    {/* console.log(column); */}
                     return (                    
                         column.map((spot, yindex) => {
-                            {/* console.log(yindex); */}
-                            {/* console.log(spot); */}
                             return (
                                 <div
                                     className={styles.box}
@@ -291,11 +270,6 @@ function Tetris () {
                     <img src={keyboard} className={styles.keyboard} alt="Keyboard layout for controls"/>
                 </div>
             }
-
-
-            {/* <Settings>
-              <StartButton onClick={()=> setGameIsStarted(!gameIsStarted)}> Help </StartButton>
-            </Settings> */}
 
         </div>
     ) 

@@ -9,26 +9,11 @@
     max-height: calc(100dvh - 154px);
 }
 
-/* .content {
-    grid-column: 1 / 13;
-    display: flex;
-    padding-top: 20px;
-    overflow-y: auto; 
-    -webkit-overflow-scrolling: touch; 
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
-    align-items: flex-start;
-    flex: 1;
-    min-height: calc(100dvh - 154px);
-    max-height: calc(100dvh - 154px);
-} */
-
 .myJourney {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     padding-bottom: 40px;
-    /* height: 100%; */
 }
 
 .imageWrapper {
@@ -53,16 +38,6 @@
     line-height: 1.1rem;
 }
 
-/* .title {
-    font-family: "Unica One", sans-serif;
-    font-weight:800;
-    font-size: 32px;
-    margin-bottom: 12px;
-} */
-
-/* .title {
-    padding-bottom: 0.5rem;
-} */
 
 .buttonContainer {
     display: flex;

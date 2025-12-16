@@ -21,10 +21,10 @@ function ProjectGiraffePage() {
       <ProjectModal id="giraffe">
         <section>
           <img
-            key={gifKey}                           // ← sorgt dafür, dass das <img> neu gemountet wird
+            key={gifKey}                          
             id="projectGiraffeAnimation"
             className={styles.image}
-            src={Animation}                        // ← kein ?b=Date.now() mehr
+            src={Animation}                        
             alt="Giraffe project animation"
             onClick={handleRestartGif}
           />

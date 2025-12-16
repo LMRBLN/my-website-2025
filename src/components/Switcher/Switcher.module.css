@@ -1,4 +1,4 @@
-/* Switcher.module.css */
+
 .switcher {
     position: relative;
     height: 28px;
@@ -15,31 +15,27 @@
   .switcher span {
     padding: 4px 12px;
     border-radius: 11px;
-    color: var(--main-black); /* Standardfarbe explizit setzen */
+    color: var(--main-black); 
   }
-
-  /* .slider span {
-    color: var(--main-black);
-  } */
 
 
   .switcher.on > span:first-of-type {
-    color: white !important; /* !important hinzufügen falls nötig */
+    color: white !important; 
     background-color: var(--main-black);
   }
 
   .switcher.off > span:first-of-type {
-    color: var(--main-black) !important; /* !important hinzufügen falls nötig */
+    color: var(--main-black) !important; 
   }
   
   .switcher.off > span:last-of-type {
-    color: white !important; /* !important hinzufügen falls nötig */
+    color: white !important; 
     background-color: var(--main-black);
 
   }
 
     .switcher.on > span:last-of-type {
-    color: var(--main-black) !important; /* !important hinzufügen falls nötig */
+    color: var(--main-black) !important; 
   }
   
   .slider {

@@ -1,10 +1,7 @@
 import ProjectModal from "../../components/ProjectModal/ProjectModal";
 import styles from "./ProjectAirYardPage.module.css"
 import FlipBook from "../../components/Flipbook/Flipbook";
-import AirYardPDF from "../../data/booklet_playpen_de_schriftenersetzt.pdf";
-// import AirYardPDF from "../../data/booklet_algae_de_schriftenersetzt.pdf";
-// PDF aus public Ordner laden
-// const AirYardPDF = '/files/booklet_airyard_de_schriftenersetzt.pdf';
+import AirYardPDF from "../../data/booklet_playpen_de.pdf";
 
 function ProjectAirYardPage() {
     return (

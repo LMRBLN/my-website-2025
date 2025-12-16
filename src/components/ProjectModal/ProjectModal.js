@@ -18,7 +18,6 @@ function ProjectModal ({id, children }) {
         setProjectData(foundProject || null);
     }, [id, projectId]);
 
-    // Ableiten der Werte allein aus projectData
     const finalTitle = projectData?.title || '';
     const finalDescription = projectData?.description || '';
     const finalImage = projectData?.image ? require(`../../images/${projectData.image}`) : null;

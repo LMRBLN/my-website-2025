@@ -1,48 +1,30 @@
 const checkAndClear = (arr, position) => {
-    // console.log("checkAndClear is called");
-    // console.log("arr is", arr);
-    // console.log("position is", position);
-
     let positionsToRemoveFinal = getpositionsToRemove(arr, position);
     if(positionsToRemoveFinal.length > 2) {
         clearPositions(arr, positionsToRemoveFinal);
-        return true; // Boxen wurden erfolgreich entfernt
+        return true; 
     }
-    return false; // Keine Boxen wurden entfernt
+    return false; 
 }
 
 
 const getpositionsToRemove = (arr, position) => {
-
-    // console.log("getpositionsToRemove is called");
-
     let positionsToRemove = [];
-    // console.log("pos to remove initial", positionsToRemove.length);
     positionsToRemove.push(position);
-    // console.log("pos to remove initial", positionsToRemove.length);
 
     for (let i=0; i<positionsToRemove.length; i++) {
         let temp = positionsToRemove[i];
         let adjacents = checkAdjacent(arr, temp, positionsToRemove);
-        // console.log("adjacents are", adjacents);
         positionsToRemove.push.apply(positionsToRemove, adjacents);
     }
-    // console.log("positions to remove are:", positionsToRemove)
     return positionsToRemove;
 };
 
 
 const checkAdjacent = (arr, coord, positionsToRemove) => {
-
-    // console.log("checkAdjacent is called");
-
     const adjacents = [];
-    // console.log("coord are", coord)
     let x = coord[0];
-    // console.log("x", x);
     let y = coord[1];
-    // console.log("y", y);
-    // console.log("arr[x][y]", arr[x][y-1]);
 
 
     if (arr[x][y] !== undefined) {
@@ -106,7 +88,7 @@ const checkIfStoredAlready = (coordArr, coordToCheck) => {
 
 const clearPositions = (arr, positionsToRemove) => {
 
-    positionsToRemove.forEach(coord => { // we need remove the according entries from the array
+    positionsToRemove.forEach(coord => { 
         arr[coord[0]][coord[1]] = 'remove';
       });
     for (let i = 0; i < arr.length; i++) {

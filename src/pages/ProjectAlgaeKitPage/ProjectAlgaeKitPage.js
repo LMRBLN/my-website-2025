@@ -1,7 +1,7 @@
 import ProjectModal from "../../components/ProjectModal/ProjectModal";
 import styles from "./ProjectAlgaeKitPage.module.css"
 import FlipBook from "../../components/Flipbook/Flipbook";
-import AlgaeKitPDF from "../../data/booklet_algae_de_schriftenersetzt.pdf";
+import AlgaeKitPDF from "../../data/booklet_algae_de.pdf";
 
 
 function ProjectAlgaeKitPage() {
