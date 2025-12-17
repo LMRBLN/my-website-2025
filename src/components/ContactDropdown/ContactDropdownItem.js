@@ -1,11 +1,6 @@
 import React from "react";
 import styles from "./ContactDropdown.module.css";
 
-// const dropDownPopupItemStyle = {
-//     color: 'white',
-//     display: 'flex',
-//     gap: 8
-// };
 
 function ContactDropdownItem({ icon: Icon, text, link, newWindow }) {
     return (
