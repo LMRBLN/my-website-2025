@@ -43,9 +43,8 @@
     ]
   },
   "devDependencies": {
-    "web-vitals": "^4.2.4",
     "depcheck": "^1.4.0",
     "eslint": "^8.50.0",
-    "eslint-plugin-unused-imports": "^3.1.0"
+    "web-vitals": "^4.2.4"
   }
 }
