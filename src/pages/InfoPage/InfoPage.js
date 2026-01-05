@@ -19,7 +19,7 @@ function InfoPage() {
                 </div>
                 <div className={styles.text}>
                     <p>
-                        My journey started in engineering and product development, before I moved into industrial design to focus more strongly on human-centered thinking. What shaped my work most was learning that empathy matters more than knowledge, and that testing beats overthinking.
+                        My journey started in engineering, before I moved into industrial design to focus more strongly on human-centered thinking. What shaped my work most was learning that empathy matters more than theoretical knowledge, and that trying out beats overthinking.
                     </p>
                     <p>
                         UX design felt like a natural next step — combining structure, psychology and visual communication. Working closely with engineers in the IT industry eventually led me to deepen my technical understanding through a full-stack web development bootcamp.
