@@ -37,6 +37,9 @@
     flex: 0 0 60px;
 }
 
+.aboutProject p {
+    font-size: 12px;
+}
 
 
 .scrollContent {
@@ -136,6 +139,13 @@
     grid-column: 5 / 9;
     padding-bottom: 12px;
 }
+
+/* .scrollContent p {
+    margin-bottom: 0.5rem;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 1.2rem;
+} */
 
 .scrollContent section > img {
     max-height: 500px;

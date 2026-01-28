@@ -34,15 +34,16 @@
 
 .text p {
     margin-bottom: 0.5rem;
+    font-size: 14px;
     font-weight: 100;
-    line-height: 1.1rem;
+    line-height: 1.2rem;
 }
 
 
 .buttonContainer {
     display: flex;
     justify-content: left;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 1639px) {
