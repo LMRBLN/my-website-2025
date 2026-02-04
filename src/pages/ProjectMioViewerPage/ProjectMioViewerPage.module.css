@@ -26,3 +26,39 @@
     font-weight: bolder;
 
 }
+
+.challengesSection {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 3px;
+}
+
+li {
+  font-size: 12px;
+  padding-left: 1rem;        
+  text-indent: -1rem;
+  padding-bottom: 2px;   
+  line-height: 1.2rem;     
+}
+
+ul li::before {
+  content: "•";
+  font-size: 0.5rem;   /* Mini-Punkt */
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+strong {
+    font-weight: bolder;
+    /* font-weight: 200; */
+    /* text-decoration: underline 2px var( --main-yellow); */
+    /* background: color-mix(in srgb, var(--main-yellow) 30%, white);  */
+    /* padding: 0 0.2em; */
+    /*color: color-mix(in srgb, var(--main-yellow) 95%, black); */
+}

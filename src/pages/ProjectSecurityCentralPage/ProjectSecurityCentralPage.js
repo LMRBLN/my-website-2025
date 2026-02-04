@@ -15,7 +15,7 @@ function ProjectSecurityCentralPage() {
                     <div>
                         <h4>Context</h4>
                         <p>
-                            Within this project at Nutanix GmbH, I worked on the security-related section of the company's main product, an infrastructure management software. The goal was to determine how people would like to export data from the security dashboard for use in various work contexts.
+                            Within this project at Nutanix GmbH, I worked on the security-related section of the company's main product, an infrastructure management software. The goal was to <strong>determine how people would like to export data from the security dashboard</strong> for use in various work contexts.
                         </p>
                     </div>
                     <div>
@@ -35,13 +35,14 @@ function ProjectSecurityCentralPage() {
                         </figure>
 
                         <p>
-                            Then, I planned a user study that addressed those different aspects. On the one hand, I wanted to determine what kind of artifacts, in terms of goals, content, addressees, and formats, would actually be needed. On the other hand, I wanted to learn about how a possible reporting feature could be integrated into the main dashboard and what the workflow for creating the report could genuinely look like. To this end, I interviewed our test persons (IT managers from various companies) about their habits, pain points, and wishes in the area of security reporting.
+                            Then, I planned a user study that addressed those different aspects. On the one hand, I wanted to determine what kind of artifacts, in terms of goals, content, addressees, and formats, would actually be needed. On the other hand, I wanted to learn about how a possible reporting feature could be integrated into the main dashboard and what the workflow for creating the report could genuinely look like. 
+                            
                         </p>
-
-                        <p> 
-                            I created some sketches for the editor (integration) to gain a general idea of how the reports could be displayed within the security management section and what a basic editor setup might look like.
+                        <p>
+                            To this end, I interviewed our test persons (IT managers from various companies) about their habits, pain points, and wishes in the area of security reporting, but also discussed with them some first possible approaches:
                         </p>
-                        
+                        <p>1  –  Sketches for the editor (integration) to gain a general idea of how the reports could be displayed within the security management section and what a basic editor setup might look like
+                        </p>
                         <figure>
                         <img
                             id="wireframes" 
@@ -53,7 +54,7 @@ function ProjectSecurityCentralPage() {
                         </figure>
 
                         <p>
-                            Additionally, I created some initial drafts for possible document exports of a few obvious information blocks (which we already knew about from previous user research), allowing me to evaluate the document's structure and explore some ideas for information design within it.
+                            2  –  Initial drafts for possible document exports of a few obvious information blocks (which we already knew about from previous user research), allowing me to evaluate the document's structure and explore some ideas for information design within it
                         </p>
 
                         <figure>
@@ -79,9 +80,10 @@ function ProjectSecurityCentralPage() {
                         />
                         <figcaption>Clustered Results from the Interviews</figcaption>
                         </figure>
-
+                        <h4>Key Findings</h4>
                         <p>
-                            Thanks to the user sessions, I was also able to create an overview of all the required report types, their corresponding preferred formats, target persons, motivations, and communication channels. Different from what I assumed, I learned that besides those scenarios, there is no need to have a more “free” arrangement of contents in some advanced mode. Other significant findings included that users want to automate/schedule their exports and that they should be able to deactivate and activate complete sections of the document, as well as select/deselect severity levels, all according to the reporting context. Additionally, they require an overview of all exports, including planned/scheduled ones, and the ability to edit the scheduling directly from this interface. In my example report, I received critical feedback on some points that were not yet sufficiently clear in their presentation (e.g., the monthly delta display in the history bar chart).          
+                            Thanks to the user sessions, I was also able to create an <strong>overview of all the required report types, their corresponding preferred formats, target persons, motivations, and communication channels</strong>. To name just one example (out of five identified report types), the so called "STIG report" is mainly used to organize one’s own work and, secondarily, to justify next steps in meetings, which requires a format that can be displayed in a STIG viewer (such as XML).
+                            Different from what I assumed, I learned that besides those scenarios, there is <strong>no need to have a more “free” arrangement of contents</strong> in some advanced mode. Other significant findings included that users want to <strong>automate/schedule</strong> their exports and that they should be able to deactivate and activate complete sections of the document, as well as <strong>select/deselect severity levels</strong>, all according to the reporting context. Additionally, they require an <strong>overview of all exports, including planned/scheduled ones</strong>, and the ability to edit the scheduling directly from this interface. In my example report, I received critical feedback on some points that were not yet sufficiently clear in their presentation (e.g., the monthly delta display in the history bar chart).          
                         </p>
 
                     </div>
