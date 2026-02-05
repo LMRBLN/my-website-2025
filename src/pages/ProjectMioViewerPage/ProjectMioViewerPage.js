@@ -92,20 +92,20 @@ function ProjectMioViewerPage() {
                     </div>
                     <div>
                         <h4> <IoIosFlash /> Main Challenges</h4>
-                        <ul>
-                            <li><strong>very large and complex data structures</strong> with a level of detail that has so far had no equivalent in existing solutions (PDF, Paper)</li>
-                            <li>in some cases, less obvious <strong>secondary use scenarios</strong></li>
-                            <li><strong>diverse reading habits</strong> of the users, determined by their medical department, their respective existing solutions or their place of living (east vs. west germany)</li>
+                        <ul className={styles.challengesAndDecisions}>
+                            <li className={styles.challengesAndDecisions}><strong>very large and complex data structures</strong> with a level of detail that has so far had no equivalent in existing solutions (PDF, Paper)</li>
+                            <li className={styles.challengesAndDecisions}>in some cases, less obvious <strong>secondary use scenarios</strong></li>
+                            <li className={styles.challengesAndDecisions}><strong>diverse reading habits</strong> of the users, determined by their medical department, their respective existing solutions or their place of living (east vs. west germany)</li>
                         </ul>
                     </div>
                     <div>
                         <h4> <IoBulbSharp /> Key decisions</h4>
-                        <ul>
-                            <li><strong>individual display settings</strong>, eg. to switch on and off certain fields (from the first level)</li>
-                            <li><strong>graphic modes</strong>, eg. to enhance quick reception of timelines</li>
-                            <li>optional <strong>quick-jump-navigation</strong> long lists of results</li>
-                            <li><strong>quick-filters</strong> for the main use cases</li>
-                            <li>full-text search through the <strong>whole entry</strong> including the invisible fields</li>
+                        <ul className={styles.challengesAndDecisions}>
+                            <li className={styles.challengesAndDecisions}><strong>individual display settings</strong>, eg. to switch on and off certain fields (from the first level)</li>
+                            <li className={styles.challengesAndDecisions}><strong>graphic modes</strong>, eg. to enhance quick reception of timelines</li>
+                            <li className={styles.challengesAndDecisions}>optional <strong>quick-jump-navigation</strong> long lists of results</li>
+                            <li className={styles.challengesAndDecisions}><strong>quick-filters</strong> for the main use cases</li>
+                            <li className={styles.challengesAndDecisions}>full-text search through the <strong>whole entry</strong> including the invisible fields</li>
                         </ul>
                     </div>
                     <div>
